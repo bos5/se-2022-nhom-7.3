@@ -228,4 +228,18 @@ DontDestroyOnLoad
 
 
 
+
+* Game features:
+    -   Game này là phỏng theo subway surfers, đóng vai 1 nhân vật di chuyển liên tục trên đường thẳng theo 1 trong 3 đường ray và cố gắng né tránh các chướng ngại vật để đạt điểm cao, đồng thời nhặt vàng và các vật phẩm giúp ích.
+    -   Bảng xếp hạng người chơi điểm cao.
+    -   Cửa hàng để mua vật phẩm (key, coin, ....) và mua các nhân vật khác.
+    -   Các vật phẩm ăn được khi  đang chơi (jetpack, supersneaker, coin magnet, 2x multiplier, hoverbike, hoverboard).
+    -   Chế độ nhiều người chơi (online).
+    -   Kẻ thù : 1 ông cảnh sát truy đuổi.
+    -   Nhiệm vụ : nhặt các item; thử thách : nhặt các chữ cái.
+    -   Kết nối với facebook để mời bạn bè chơi cùng, đua top điểm cùng bạn bè,...
+    -   Đổi ngôn ngữ.
+    -   Bật/tắt nhạc nền, âm thanh; điều chỉnh độ nhạy, mức độ các hiệu ứng; thoát game.
+
+
                 
