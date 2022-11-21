@@ -82,18 +82,21 @@ GameMain:
                 TapToPlay: CallAniRandom.cs
                 ButUploadVideo: ButtonStatus.cs
                 MessageBox: 
-                    ViewAdsGetSkisBox: DeactiveMessageBox.cs
+                    ViewAdsGetSkisBox:  CooldownSkis.cs
+                                        DeactiveMessageBox.cs
                     ViewAdsGetKeyBox: CooldownKey.cs
-                    GetMissionsBox
-                    GetChallengeBox
-                    RateAppBox
-                    ShareFacebookBox
-                    InviteFacebookBox
-                    NetworkSettingBox
-                    RoomsSettingBox
-                    AutoFindOpponentsBox
-
-
+                                      DeactiveMessageBox.cs
+                    GetMissionsBox: DeactiveMessageBox.cs
+                    GetChallengeBox: DeactiveMessageBox.cs
+                    RateAppBox: DeactiveMessageBox.cs
+                                MessageRate.cs
+                    ShareFacebookBox: DeactiveMessageBox.cs
+                                        MessageShareFB.cs
+                    InviteFacebookBox: MessageInviteFB.cs
+                                        DeactiveMessageBox.cs
+                    NetworkSettingBox: MessageNetwork.cs
+                    RoomsSettingBox: MessageRoom.cs
+                    AutoFindOpponentsBox: MessageFindOpponent.cs
             FormGamePlay:
                 ButPause: ButtonStatus.cs
                 PanelViewFull: RunEffectViewEnemy.cs
@@ -131,6 +134,7 @@ GameMain:
             HeroMax(Clone): HeroController.cs
                             ShadowFixed.cs
             EnemyPolice(Clone): EnemyController.cs
+
     ContainHeroConstruct:
         MainCamera: PageConstructHero.cs
         Canvas:
@@ -213,7 +217,7 @@ GameMain:
         MainCamera: PageHighScore.cs
             Canvas:
                 TextHighScore: Gradient.cs
-                    NumberHighScore: EffectUpScore.cs
+                    NumberHighScore: EffectUpSc ore.cs
             EffectBackground: RotateParticleSpeed.cs
     ContainOpenBox:
         MainCamera: PageOpenMysteryBox.cs
