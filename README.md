@@ -133,6 +133,10 @@ GameMain:
             NetworkController: NetworkMagnager.cs
             HeroMax(Clone): HeroController.cs
                             ShadowFixed.cs
+                            Skis:   ItemAddHero.cs
+                                    SkisController.cs
+                                    MagnetController.cs
+                                    PlaySparksSkis.cs
             EnemyPolice(Clone): EnemyController.cs
 
     ContainHeroConstruct:
@@ -231,6 +235,12 @@ DontDestroyOnLoad
         Terrain: TerrainInformation.cs
 
 
+ContainHeroConstruct:
+        MainCamera: PageConstructHero.cs
+        Canvas:
+            BackgroundContent 
+                ScorePlay
+                    NumScore: EffectUpScore.cs
 
 
 * Game features:
