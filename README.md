@@ -356,4 +356,15 @@ Nhóm 7.3 làm về game unity subway surfers
             thoát khỏi ứng dụng bằng lệnh Application.Quit().
 
 * Đổi ngôn ngữ : 
-    - Khi đó, ta kích hoạt listLanguages gọi đến Animator tạo hoạt ảnh ấn và gọi lớp MessageListLanguage chạy hàm StartShowMessage().
+    - Khi nhấn nút thì lớp MessageListLanguage sẽ gọi hàm StartShowMessage() để hiện lên bảng thông báo các ngôn ngữ có thể đổi và cờ của các nước như là nút ấn.
+    - Nếu muốn thay đổi thì chọn cờ nước tương ứng, khi đó ta sẽ gọi hàm ChangeLanguage() với tham số là số nguyên biểu diễn ngôn ngữ mà ta đã chọn :
+            public void ChangeLanguage(int indexLang)
+        {
+            Modules.indexLanguage = indexLang;
+            Modules.SaveSettingValue();  
+            settingBox.GetComponent<MessageSetting>().StartShowMessage();
+            pauseBox.GetComponent<MessagePauseGame>().UpdateLanguages();
+            Camera.main.GetComponent<PageMainGame>().ChangeAllLanguage();
+            CloseListLanguage();
+        }
+    - Đầu tiên, biến chứa ngôn ngữ mặc định trong Modules sẽ được thay bằng ngôn ngữ ta nhập. Sau đó, được lưu lại bằng hàm SaveSettingValue(). Và settingBox sẽ được hiện lên lại với câu lệnh settingBox.GetComponent<MessageSetting>().StartShowMessage() với ngôn ngữ mới. Tiếp đến là hộp thoại pause game khi đang chơi được cập nhật ngôn ngữ mới. Và cuối cùng là các thành phần còn lại (các cửa sổ, các màn hình khác,... ) được cập nhật ngôn ngữ mới.
