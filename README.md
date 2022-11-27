@@ -334,3 +334,26 @@ Nhóm 7.3 làm về game unity subway surfers
         + số ScoreBooster hiện tại +1
         + Nếu số ScoreBooster hiện tại > maxScorebooster = 7
             thì số ScoreBooster hiện tại  = maxScorebooster = 7
+
+*  Bật/tắt nhạc nền, âm thanh; điều chỉnh độ nhạy, mức độ các hiệu ứng; thoát game:
+    - Trong các lớp xử lý công việc liên quan đến âm thanh, thường có hàm PlayAudioClipFree() để xử lý dãn cách âm thanh, ko cho âm thanh chạy quá sát.
+    - Lớp MessageSetting.cs gọi hàm StartShowMessage() để hiện ra bảng setting.
+    - Bật tắt nhạc nền: 
+        + ButtonVolumeBGClick() được gọi khi ta ấn vào nút:
+            Thay đổi giá trị volumeBackground từ 0 thành 1 hoặc từ 1 thành 0 tùy thuộc vào giá trị ban đầu. Song song đó là đổi chữ "On" thành "Off" hoặc "Off" thành "On"
+            Sau đó, vẫn cho chơi nhạc bằng hàm PlayAudioLoop() nhưng tùy vào vomlumeBackground mà ta sẽ nghe thấy nhạc hoặc không. Và lưu lại cài đặt bằng SaveSettingValue().
+    - Bật tắt âm thanh khi nhấn nút :
+        + ButtonVolumeATClick() được gọi khi ta ấn nút: 
+            Tương tự như bật tắt nhạc nền nhưng ko cho chơi nhạc bằng hàm PlayAudioLoop().
+    - Điều chỉnh mức độ các hiệu ứng:
+        + ButtonReducedEffect() được gọi khi ta ấn nút:   
+            Thay đổi giá trị reducedEffect từ 2 thành 1 hoặc 1 thành 0 hoặc 0 thành 2 và đổi giá trị text tương ứng High->Medium,Medium->Low,Low->High. Lưu lại cài đặt bằng SaveSettingValue().
+    - Điều chỉnh độ nhạy:
+        + SliderSensivity() được gọi khi ta di chuyển thanh:
+            gọi hàm UpdateValueSensivity() trong lớp Modules để chỉnh độ nhạy. Và lưu lại cài đặt bằng hàm SaveSettingValue().
+    - Thoát game: 
+        + gọi đến hàm ButtonQuitGame() khi ta nhấn nút "Quit Game":
+            thoát khỏi ứng dụng bằng lệnh Application.Quit().
+
+* Đổi ngôn ngữ : 
+    - Khi đó, ta kích hoạt listLanguages gọi đến Animator tạo hoạt ảnh ấn và gọi lớp MessageListLanguage chạy hàm StartShowMessage().
