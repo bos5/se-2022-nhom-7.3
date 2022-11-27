@@ -190,3 +190,147 @@ Nhóm 7.3 làm về game unity subway surfers
                     textValueSkis.text thành heroSelected  
                     Click heroSelected đặt Skis đã chọn codeSkisChoose thành Skis sử dụng codeSkisUse  
 
+
+* Xử lý nếu va chạm items
+    - Nếu là đồng xu
+        + Tăng coin thêm 1
+        
+    - Nếu là key
+        + Tăng key thêm 1
+        
+    - Nếu là skis
+        + Tăng skis thêm 1
+            Nếu tổng số Skis hiện tại > maxHoverboard = 10
+                số Skis hiện tại = maxHoverboard = 10;
+    
+    - Nếu là giày
+        + Nếu chưa sử dụng giày
+            thêm hình ảnh giày trái và phải trên Hero
+        + Sử dụng giày thành true
+        
+    - Nếu là headStart
+        + Tăng headStart thêm 1
+            Nếu tổng số headStart hiện tại > maxHeadstart = 10
+                số headStart hiện tại = maxHeadstart = 10;
+    
+    - Nếu là mysteryBox
+        + Tăng mysteryBox thêm 1
+        
+    - Nếu là nam châm
+        + Nếu chưa sử dụng nam châm 
+                thêm model sử dụng nam châm trên Hero
+        + Sử dụng nam châm thành true 
+        + SetAniAddMagnet(): Set các loại di chuyển khi ăn nam châm :
+            Nếu đang chạy thường: 
+                chuyển kiểu chạy thành runMagnet; 
+                chuyển animation thành runMagnet 
+            Nếu đang trượt ván: 
+                chuyển kiểu chạy thành runSkisMagnet; 
+                chuyển animation thành runSkisMagnet
+            Nếu đang bay tên lửa: 
+                chuyển kiểu chạy thành runRocketMagnet; 
+                chuyển animation thành runRocketMagnet
+            Nếu đang bay cable: 
+                chuyển kiểu chạy thành runCableMagnet; 
+                chuyển animation thành runCableMagnet
+            
+    - Nếu là rocket
+        + Nếu chưa sử dụng rocket 
+                thêm model sử dụng rocket trên Hero
+        + Khoảng cách với Enemy = 2 
+        + Sử dụng rocket thành true     
+        + Kích hoạt hiệu ứng của item bay trên không;
+        + SetAniAddRocket(): 
+            Nếu đang sử dụng cable
+                Sử dụng Cable = false;
+                Remove model sử dụng cable 
+            Nếu đang jumper
+                Sử dụng Jumper = false;
+            Nếu đang sử dụng nam châm
+                chuyển kiểu chạy thành runRocketMagnet;
+                chuyển animation thành runRocketMagnet
+            Những trường hợp còn lại: 
+                chuyển kiểu chạy thành runRocket;
+                chuyển animation thành runRocket
+        + JumpHero(): bật nhảy
+
+    - Nếu là jumper
+        + Khoảng cách với Enemy = 2 
+        + Sử dụng rocket thành true  
+        + Kích hoạt hiệu ứng của item bay trên không;
+        + SetAniAddJumper(): 
+            Remove Progress sử dụng jetpack
+            Remove Progress sử dụng hoverbike
+            Ẩn đối tượng Skis khi sử dụng item jumper
+            Nếu đang sử dụng cable
+                RemoveCableItem(false)
+            Nếu đang sử dụng cable
+                RemoveJumperItem(false);
+            Những trường hợp còn lại: 
+                chuyển kiểu chạy thành runJumper;
+                chuyển animation thành runJumper
+        + JumpHero(): bật nhảy
+
+    - Nếu là cable
+        + Nếu chưa sử dụng cable 
+            thêm model sử dụng cable trên Hero
+        + Khoảng cách với Enemy = 2 
+            Sử dụng Cable = true;
+        + Kích hoạt hiệu ứng của item bay trên không;
+        + SetAniAddCable()  
+            Remove Progress của item jetpack
+            Ẩn đối tượng Skis khi sử dụng item cable
+            Nếu đang sử dụng rocket 
+                Sử dụng Rocket = false;
+                Remove Model sử dụng Rocket
+            Nếu đang sử dụng jumper
+                Sử dụng Jumper = false;
+            Nếu đang sử dụng nam châm
+                chuyển kiểu chạy thành runCableMagnet;
+                chuyển animation thành runCableMagnet
+            Những trường hợp còn lại: 
+                chuyển kiểu chạy thành runCable;
+                chuyển animation thành runCable
+            }
+
+        + JumpHero(): bật nhảy
+
+    - Nếu là balloon
+        + Remove hiệu ứng item bay
+        + Thiết lập lại trang thái:
+                không di chuyển sang trái phải
+                Hero thực hiện jump
+                doneBackHero = true;
+        + Khoảng cách với Enemy = 2 
+        + SetAniAddBalloon():
+            Remove Progress của item jetpack
+            Remove Progress của item hoverbike
+            Ẩn đối tượng Skis khi sử dụng item Skis
+            Nếu đang sử dụng cable
+                Sử dụng Cable = false;
+                Remove Model sử dụng Cable
+            Nếu đang sử dụng rocket 
+                Sử dụng Rocket = false;
+                Remove Model sử dụng Rocket
+            Nếu đang sử dụng jumper
+                Sử dụng Jumper = false;
+        + Điều chỉnh camera đi theo khi bay 
+        + SetAniAfterFall(): sau khi tiếp đất 
+            Nếu đang sử dụng skis
+                Nếu đang sử dụng nam châm
+                    chuyển kiểu chạy thành runSkisMagnet;
+                Nếu không sử dụng nam châm
+                    chuyển kiểu chạy thành runSkis;
+            Những trường hợp còn lại: 
+                Nếu đang sử dụng nam châm
+                    chuyển kiểu chạy thành runMagnet;
+                Nếu không sử dụng nam châm
+                    chuyển kiểu chạy thành runNormal;     
+        + Hủy bỏ sử dụng Animation sử dụng balloon 
+        + Điều chỉnh camera đi theo
+        + Reset lại toàn bộ item trên map    
+    
+    - Nếu là scoreBooster
+        + số ScoreBooster hiện tại +1
+        + Nếu số ScoreBooster hiện tại > maxScorebooster = 7
+            thì số ScoreBooster hiện tại  = maxScorebooster = 7
