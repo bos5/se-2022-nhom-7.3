@@ -368,3 +368,45 @@ Nhóm 7.3 làm về game unity subway surfers
             CloseListLanguage();
         }
     - Đầu tiên, biến chứa ngôn ngữ mặc định trong Modules sẽ được thay bằng ngôn ngữ ta nhập. Sau đó, được lưu lại bằng hàm SaveSettingValue(). Và settingBox sẽ được hiện lên lại với câu lệnh settingBox.GetComponent<MessageSetting>().StartShowMessage() với ngôn ngữ mới. Tiếp đến là hộp thoại pause game khi đang chơi được cập nhật ngôn ngữ mới. Và cuối cùng là các thành phần còn lại (các cửa sổ, các màn hình khác,... ) được cập nhật ngôn ngữ mới.
+
+* Xử lý va chạm
+    - Nếu đang sử dụng Jumper, Rocket, Cable: thì không bị va chạm
+
+    - Va chạm với vật cản đằng trước
+        + Xử lý nếu có ván trượt thì không chết
+            Nếu đang sử dụng skis: Thực hiện xóa tất cả vật cản xung quanh khu vực này này
+        + Nếu không sử dụng skis: Bị chết do va chạm với vật cản typeFalling
+  
+    - Va chạm trái phải
+        + Va chạm không bật lại 
+            Nếu đang sử dụng skis: Thực hiện xóa tất cả vật cản xung quanh khu vực này này
+            Nếu không sử dụng skis: Bị chết do backScene
+        + Xử lý va chạm với vật cản đẩy lại
+            Nếu đang ở bên trái
+                nếu đi sang trái
+            Nếu đang ở bên phải
+                nếu đi sang trái
+            ColliderObjectSlowSpeed():
+                Khoảng cách enemy -1
+                Nếu khoảng cách enemy = 0 -> bị tóm
+                    Nếu đang sử dụng skis
+                        Khoảng cách enemy = 2;
+                        Trạng thái hero chuyển thành run;
+                    Nếu không sử dụng skis
+                        Bị chết do policeCatch
+                Nếu khoảng cách enemy > 0
+                    Nếu đang không sử dụng Jumper, Rocket, Cable
+                        tốc độ nhân vật chậm lại
+
+    - Xử lý va chạm vật cản typeCollider == TypeCollider.slower
+        + gọi hàm ColliderObjectSlowSpeed():
+            Khoảng cách enemy -1
+            Nếu khoảng cách enemy = 0 -> bị tóm
+                Nếu đang sử dụng skis
+                    Khoảng cách enemy = 2;
+                    Trạng thái hero chuyển thành run;
+                Nếu không sử dụng skis
+                    Bị chết do policeCatch
+            Nếu khoảng cách enemy > 0
+                Nếu đang không sử dụng Jumper, Rocket, Cable
+                    tốc độ nhân vật chậm lại
