@@ -24,8 +24,12 @@ Nhóm 7.3 làm về game unity subway surfers
  Scene LoadData: Khi vào game sẽ hiển thị một màn hình chờ để khởi tạo tài nguyên game. Màn hình chờ được thiết kế bằng đồ hoạ 2D nằm trong canvas. Các tài nguyên, script được load trong scene ListResource, Poolterrain, Poolother.
   - Poolterrain gồm các đối tượng khung cảnh, môi trường trong game như cây cối, toà nhà, đường phố,... mà nhân vật chạy.
   - Poolother gồm các coin mà nhân vật nhặt được.
-  - ListResource gồm 
+  - ListResource gồm các nhân vật trong game, phản diện và các file âm thanh.
   Các lớp trên thực chất là khởi tạo các đối tượng cần sử dụng nên rất tốn thời gian và tài nguyên. Chúng đều có Dontdestroyonload(mội phương thức của class Objects trong unity giúp các đối tượng không bị loại bỏ khi tải scene) để tiếp tục sử dụng trong scene gameplay.
+* Ui trong unity được thiết kế bằng canvas. Mọi unity thì đều nằm trong lớp canvas và unity hỗ trợ rất tốt Ui bằng nhiều chức năng, lựa chọn thiết kế cho người dùng. Trong game có một vài Ui quan trong như màn hình loadgame(đã nói ở trên), màn hình menu trong scene maingame(FormGameMenu), FormGameplay, FormGameMenu, ContainAchievement, ContainShopItem, ...
+* Ui FormGameMenu:Menu hiện thị tất cả các feature của game như vật phẩm, các nhân vật, nhiệm vụ,
+  Lần đầu load game sẽ lâu hơn bình thường và sẽ có một màn chơi hướng dẫn cho người mới.
+  Scene gameplay sẽ được giải thích dần trong các feature và cơ chế game.
 * Kẻ thù trong game được thiết kế trong file EnemyCOntrollers.cs.
  - Một số đặc tính của kẻ thù:
    - Không bị ảnh hưởng bởi thanh chắn như nhân vật.
