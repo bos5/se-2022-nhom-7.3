@@ -26,10 +26,9 @@ Nhóm 7.3 làm về game unity subway surfers
   - Poolother gồm các coin mà nhân vật nhặt được.
   - ListResource gồm 
   Các lớp trên thực chất là khởi tạo các đối tượng cần sử dụng nên rất tốn thời gian và tài nguyên. Chúng đều có Dontdestroyonload(mội phương thức của class Objects trong unity giúp các đối tượng không bị loại bỏ khi tải scene) để tiếp tục sử dụng trong scene gameplay.
-* Ui trong unity được thiết kế bằng canvas. Mọi unity thì đều nằm trong lớp canvas và unity hỗ trợ rất tốt Ui bằng nhiều chức năng, lựa chọn thiết kế cho người dùng. Trong game có một vài Ui quan trong như màn hình loadgame(đã nói ở trên), màn hình menu trong scene maingame(FormGameMenu), FormGameplay, FormGameMenu, ContainAchievement, ContainShopItem, ...
-* Ui FormGameMenu:Menu hiện thị tất cả các feature của game như vật phẩm, các nhân vật, nhiệm vụ,
-  Lần đầu load game sẽ lâu hơn bình thường và sẽ có một màn chơi hướng dẫn cho người mới.
-  Scene gameplay sẽ được giải thích dần trong các feature và cơ chế game.
+* Ui trong unity được thiết kế bằng canvas. Mọi unity thì đều nằm trong lớp canvas và unity hỗ trợ rất tốt Ui bằng nhiều chức năng, lựa chọn thiết kế cho người dùng. Trong game có một vài Ui quan trọng như màn hình loadgame(đã nói ở trên), màn hình menu trong scene maingame(FormGameMenu), FormGameplay, FormGameMenu, ContainAchievement, ContainShopItem, ...
+* Ui FormGameMenu: Menu hiện thị tất cả các feature của game. Người chơi có thể lựa chọn nhân vật, mua item trong shop, kiểm tra nhiệm vụ, chỉnh sửa một số cài đặt game,...
+* Ui FormGamePlay: Một Ui hiển thị trong màn hình chơi game. Ui này hiển thị vật phẩm có thể dùng, số vàng kiểm được, số điểm hiện tại, phím dừng game, ...
 * Kẻ thù trong game được thiết kế trong file EnemyCOntrollers.cs.
  - Một số đặc tính của kẻ thù:
    - Không bị ảnh hưởng bởi thanh chắn như nhân vật.
