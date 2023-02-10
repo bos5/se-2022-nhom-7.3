@@ -27,123 +27,75 @@ Nhóm 7.3 làm về game unity subway surfers
      - Sẽ chạy chậm hơn nhân vật một khoảng và sau khi chạy một thời gian mà người chơi không vấp phải các chướng ngại nhỏ hay bị va đập với tường khi người chơi cố tình hay vô ý lướt quá sang trái hay phải khi đừng cạnh rìa, sẽ lùi xa một khoảng(gọi đến hàm RunMoveNearFarFollow) và rơi vào trạng thái nghỉ(idle) và ẩn hoạt ảnh.
      - Khi người chơi bị vấp phải các chướng ngại nhỏ sẽ tiến gần vào nhân vật(gọi đến hàm MoveNearFarFollow) và nếu người chơi vấp tiếp vào các chướng ngại nhỏ thì người chơi sẽ thua, sẽ có thêm hoạt ảnh "attack" bắt nhân vật.
 
-* Mua vật phẩm trong ShopItem
-    - Buy Item
-        + Buy Coin:
+* Mua vật phẩm và nâng cấp item trong ShopItem: class PageShopItems.cs
 
-        + Buy Key:
-        
-        + Buy Single use:
-            Đối với ItemSkis, ItemHeadStart, ItemScoreBooster: Gán file BuyItemController.cs truyền vào codeItem: 2.ItemSkis, 4.ItemHeadStart,5.ItemScoreBooster
+    - Mua vật phẩm: 
+        + Mua Coin:
+        + Mua Keys:
+        + Mua vật phẩm sử dụng 1 lần:
 
-                textTotal trong BuyItemController.cs Là số lượng item đang có
+            Class BuyItemController.cs: để lấy ra số lượng item đang có rồi gán số lượng ra Text Total để hiển thị cho người dùng số lượng item đang có bằng các ngôn ngữ khác nhau. Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster
 
-                Tạo 1 text Total truyền vào là textTotal để in ra màn hình số lượng item đang có
+            Class ButtonDownItem.cs: Tạo hoạt ảnh cuộn khi kéo của ListItem 
 
-                *Button Buy Item:
-                    Tạo Text Value nhâp vào là giá tiền của item
-
-                    Tạo Text Note là infoBuy của item
-
-                    ButDown:
-                        Gán file ButtonDownItem.cs và truyền vào kích thước, thời gian show ra vùng infoBuy và ButBuy 
-                        Tạo Button gọi hàm ButtonDownItem.ButtonClick(): Nếu click vào button sẽ show ra infoBuy và ButBuy của item 
-
-                    ButBuy: 
-                        Gán file ButtonBuyItem.cs và truyền vào 
-                            codeItem: 2.ItemSkis, 4.ItemHeadStart, 5.ItemScoreBooster
-                            textCost: Value (giá tiền)
-                            textNote: Total (số lượng item đã có)
-                            textCoin: NumCoin (Tổng số lượng coin hiện có)
-
-                        Tạo Button gọi hàm ButtonBuyItem.ButtonClick(): 
-                            Nếu đủ tiền mua: 
-                                Nếu số lượng item hiện tại < số lượng item tối đa(Trong Modules.cs: maxHoverboard = 9999; maxHeadstart = 10; maxScorebooster = 7;)
-                                    Số lượng item hiện có + 1
-                                    Trừ số coin hiện tại bằng textCost
-                                Nếu số lượng item hiện tại > số lượng item tối đa
-                                    textNote.text = AllLanguages.shopMaxNumber[Modules.indexLanguage] để in ra thông báo lỗi maximumNumber với ngôn ngữ đã thiết lập
-                            Nếu không đủ tiền 
-                                textNote.text = AllLanguages.shopNotEnough[Modules.indexLanguage] để in ra lỗi không đủ tiền với các ngôn ngữ
-
-            Đối với ItemMysteryBox: Gán file BuyItemController.cs truyền vào codeItem: 3.ItemMysteryBox
-
-                textTotal trong BuyItemController.cs: textTotal.text = AllLanguages.shopUseRight[iLang] là thông báo sử dụng ngay sau khi mua với các ngôn ngữ
-
-                Tạo 1 text Total truyền vào là textTotal để in ra màn hình thông báo sử dụng ngay sau khi mua
-
-                *Button Buy ItemMysteryBox:
-                    Tạo Text Value nhâp vào là giá tiền của item
-                    Tạo Text Note là infoBuy của item
-
-                    ButDown:
-                        Gán file ButtonDownItem.cs và truyền vào kích thước, thời gian show ra vùng infoBuy và ButBuy 
-                        Tạo Button gọi hàm ButtonDownItem.ButtonClick(): Nếu click vào button sẽ show ra infoBuy và ButBuy của item 
-
-                    ButBuy: 
-                        Gán file ButtonBuyItem.cs và truyền vào 
-                            codeItem: 3.ItemMysteryBox
-                            textCost: Value (giá tiền)
-                            textNote: Total (thông báo sử dụng ngay sau khi mua)
-                            textCoin: NumCoin (Tổng số lượng coin hiện có)
-                        Tạo Button gọi hàm ButtonBuyItem.ButtonClick(): 
-                            Nếu đủ tiền mua: 
-                                Trừ số coin hiện tại bằng textCost
-                                Mở ItemMysteryBox trong phần ContainOpenBox
-                            Nếu không đủ tiền 
-                                textNote.text = AllLanguages.shopNotEnough[Modules.indexLanguage] để in ra lỗi không đủ tiền với các ngôn ngữ
-
-    - Upgrade item: Tăng thời gian sử dụng item
-        + Đối với ItemJetpack, ItemSuperSneakers, ItemCoinMagnet, Item2XMultiplier, ItemCable, ItemHoverBoard: 
-            Gán file UpgradesController.cs và truyền vào codeItem: 0.ItemJetpack, 1.ItemSuperSneakers, 2.ItemCoinMagnet, 3.Item2XMultiplier, 4.ItemCable, 5.ItemHoverBoard
-
-        + Button Buy Item:
-            Tạo Text Value truyền vào là textCost trong UpgradesController.cs là giá tiền để upgrade item:
-            Đối với ItemJetpack:
-                money = 250 * Mathf.Pow(2, (Modules.levelUpgradeRocket + 1));
-                    (string dataLevelRocket = SaveLoadData.LoadData("SaveLevelRocket", true);
-                    if (dataLevelRocket == "") dataLevelRocket = "0";// Nếu là lần đầu upgrade
-                    levelUpgradeRocket = IntParseFast(dataLevelRocket);)
-            Tương tự với levelUpgradePower, levelUpgradeMagnet, levelUpgradeXPoint , levelUpgradeCable , levelUpgradeSkis đối với ItemSuperSneakers, ItemCoinMagnet, Item2XMultiplier, ItemCable, ItemHoverBoard
-
-            Tạo Text Note là infoBuy của item
-
-            Tạo Image Level truyền vào là progressBox trong UpgradesController.cs để biểu diễn Lever của item bằng hình ảnh
-                    
-            ButDown:
-                Gán file ButtonDownItem.cs và truyền vào kích thước, thời gian show ra vùng infoBuy và ButBuy 
-                Tạo Button gọi hàm ButtonDownItem.ButtonClick(): Nếu click vào button sẽ show ra infoBuy và ButBuy của item 
-
-            ButBuy: 
-                Gán file ButtonUpgradesItem.cs và truyền vào 
-                    codeItem: 0.ItemJetpack, 1.ItemSuperSneakers, 2.ItemCoinMagnet, 3.Item2XMultiplier, 4.ItemCable, 5.ItemHoverBoard
-                    progressBox: Lever (lever hiện tại của item)
-                    textCost: Value (giá tiền)
-                    textCoin: NumCoin (Tổng số lượng coin hiện có)
-
-                Tạo Button gọi hàm ButtonUpgradesItem.ButtonClick(): 
-                    Nếu đủ tiền mua: 
-                        Nếu Lever item hiện tại < max LevelItem(Trong Modules.cs: maxLevelItem = 10)
-                            Lever item +1
-                            Trừ số coin hiện tại bằng textCost
-                            UpgradesControllerLoadDataNow(): Load lại data để cập nhật Lever của item bằng hình ảnh 
-                            return new Vector2(timeUseRocket.x + timeAddPerLevel * levelUpgradeRocket, timeUseRocket.y + timeAddPerLevel * levelUpgradeRocket): tăng thời gian sử dụng item timeAddPerLevel = 3f
-                        Nếu Lever item hiện tại < max LevelItem
-                            ShowError(AllLanguages.shopMaxLevel[Modules.indexLanguage]) để in ra thông báo lỗi shopMaxLevel với ngôn ngữ đã thiết lập
+            Class ButtonBuyItem.cs: Xử lý mua vật phẩm khi click mua. 
+                Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster. 
+                Biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua item, biến textNote: để trả lại số lượng vật phẩm sau khi mua, biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                Nếu Code item là: 0 coin, 1 key thì xử lý trong app purchase
+                Nếu Code item là: 2 skis, 4 headStart, 5 scoreBooster: 
+                    Nếu số tiền hiện tại > giá tiền vật phẩm
+                        Nếu số lượng item hiện tại < số lượng item tối đa(Trong Modules.cs: maxHoverboard = 9999; maxHeadstart = 10; maxScorebooster = 7;)
+                            Số lượng item hiện có + 1
+                            Trừ số coin hiện tại bằng textCost và trả lại giá trị coin hiện tại là textCoin
+                            Trả lại số lượng item hiện có textNote
+                        Nếu số lượng item hiện tại = số lượng item tối đa
+                            textNote in ra thông báo lỗi maximumNumber 
                     Nếu không đủ tiền 
-                        ShowError(AllLanguages.shopNotEnough[Modules.indexLanguage]) để in ra lỗi không đủ tiền với các ngôn ngữ
+                        textNote in ra thông báo lỗi không đủ tiền
+                Nếu Code item là: 3 mysteryBox
+                    Nếu số tiền hiện tại > giá tiền vật phẩm
+                        Trừ số coin hiện tại bằng textCost và trả lại giá trị coin hiện tại là textCoin
+                        Di chuyển đến PageOpenBox hoạt ảnh mở hộp   
+                    Nếu không đủ tiền 
+                        textNote in ra thông báo lỗi không đủ tiền
+            
+    - Nâng cấp item (Tăng thời gian sử dụng item): 
 
-* Mua Hero và Skis trong HeroConstruct
-    - BuyHero:
-        + Thay đổi hình ảnh miêu tả Hero trong InfoObjectSelected: 
-            Trong ListObjectSelect tạo các ItemTempHero gán file ChangeImageClick.cs truyền vào codeObject ứng với id của các Hero
+            Class UpgradesController.cs: để tính giá tiền để nâng cấp item của mỗi level rồi in ra textCost. Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis. 
+                Giá tiền được tính bằng: money = 250 * Mathf.Pow(2, (level item + 1))
+                Nếu giá tiền hiện tại > 256000 thì giá tiền = 256000
+
+            Class ButtonDownItem.cs: Tạo hoạt ảnh cuộn khi kéo của ListItemUpgrades
+
+            Class ButtonUpgradesItem.cs: Xử lý mua vật phẩm khi click mua. 
+                Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
+                Biến progressBox: để hiển thị hình ảnh thanh level của item, biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua nâng cấp, biến textNote: in ra thông báo nếu lỗi, biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                    Nếu số tiền hiện tại > giá tiền nâng cấp
+                        Nếu level item hiện tại < level item item tối đa(Trong Modules.cs: maxLevelItem = 10)
+                            Tăng level item lên 1
+                            Trừ số coin hiện tại bằng textCost và trả lại giá trị coin hiện tại là textCoin
+                            Update lại giá tiền nâng cấp item trong UpgradesController.cs
+                        Nếu level item hiện tại = level item item tối đa
+                            textNote in ra thông báo lỗi shopMaxLevel 
+                    Nếu không đủ tiền 
+                        textNote in ra thông báo lỗi không đủ tiền
+                
+
+* Mua Hero và Skis:
+    - Class ListCharacterUse: danh sách các nhân vật và ván trượt trước khi load game
+    - Class ChangeImageClick.cs: Hiệu ứng chiễu đền và tạo ra các clone khi click vào nhân vật trong List nhân vật 
+    - Class HeroConstruct.cs
+        FixedUpdate(): Tạo thanh cuộn danh sách các nhân vật và ván trượt tuần tự để chọn
+        LoadListHero(): Danh sách các nhân vật
+        LoadListSkis(): Danh sách các ván trượt
+        LoadHeroChoose():
 
             Trong ItemTempHero tạo Button gọi hàm ChangeImageClick.ButtonClick(string nameFunction) với nameFunction truyền vào là ButtonHeroClick( trong PageConstructHero.ButtonHeroClick(string codeHero) với codeHero truyền vào là codeObject ) 
 
             Nếu click vào vùng ItemTempHero sẽ gọi hàm ChangeImageClick.ButtonClick(): InfoObjectSelected sẽ thay đổi thành hình ảnh Hero ứng với codeHero ở vùng ItemTempHero
                 codeHeroChoose trong PageConstructHero.cs ở MainCamera sẽ có giá trị là codeObject ứng với id của các Hero
                 Text trong InfoText sẽ thay đổi theo textNoteHero (trong PageConstructHero.cs ở MainCamera textNoteHero.text = AllLanguages.heroInfoHero[heroNow.noteHero][Modules.indexLanguage] sẽ có giá trị là heroInfoHero ứng với id của các Hero) để in ra thông tin của Hero
-
+    - Mua Hero:
         + Button Buy Hero
             ButtonBuy tạo Button gọi hàm PageConstructHero.ButtonCoinHeroClick()
 
