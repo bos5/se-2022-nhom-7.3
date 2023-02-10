@@ -24,12 +24,8 @@ Nhóm 7.3 làm về game unity subway surfers
  Scene LoadData: Khi vào game sẽ hiển thị một màn hình chờ để khởi tạo tài nguyên game. Màn hình chờ được thiết kế bằng đồ hoạ 2D nằm trong canvas. Các tài nguyên, script được load trong scene ListResource, Poolterrain, Poolother.
   - Poolterrain gồm các đối tượng khung cảnh, môi trường trong game như cây cối, toà nhà, đường phố,... mà nhân vật chạy.
   - Poolother gồm các coin mà nhân vật nhặt được.
-  - ListResource gồm các nhân vật trong game, phản diện và các file âm thanh.
+  - ListResource gồm 
   Các lớp trên thực chất là khởi tạo các đối tượng cần sử dụng nên rất tốn thời gian và tài nguyên. Chúng đều có Dontdestroyonload(mội phương thức của class Objects trong unity giúp các đối tượng không bị loại bỏ khi tải scene) để tiếp tục sử dụng trong scene gameplay.
-* Ui trong unity được thiết kế bằng canvas. Mọi unity thì đều nằm trong lớp canvas và unity hỗ trợ rất tốt Ui bằng nhiều chức năng, lựa chọn thiết kế cho người dùng. Trong game có một vài Ui quan trong như màn hình loadgame(đã nói ở trên), màn hình menu trong scene maingame(FormGameMenu), FormGameplay, FormGameMenu, ContainAchievement, ContainShopItem, ...
-* Ui FormGameMenu:Menu hiện thị tất cả các feature của game như vật phẩm, các nhân vật, nhiệm vụ,
-  Lần đầu load game sẽ lâu hơn bình thường và sẽ có một màn chơi hướng dẫn cho người mới.
-  Scene gameplay sẽ được giải thích dần trong các feature và cơ chế game.
 * Kẻ thù trong game được thiết kế trong file EnemyCOntrollers.cs.
  - Một số đặc tính của kẻ thù:
    - Không bị ảnh hưởng bởi thanh chắn như nhân vật.
@@ -94,65 +90,36 @@ Nhóm 7.3 làm về game unity subway surfers
                 
 
 * Mua Hero và Skis:
-    - Class ListCharacterUse: danh sách các nhân vật và ván trượt trước khi load game
+    - Class ListCharacterUse.cs: danh sách các nhân vật và ván trượt trước khi load game
     - Class ChangeImageClick.cs: Hiệu ứng chiễu đền và tạo ra các clone khi click vào nhân vật trong List nhân vật 
-    - Class HeroConstruct.cs
-        FixedUpdate(): Tạo thanh cuộn danh sách các nhân vật và ván trượt tuần tự để chọn
-        LoadListHero(): Danh sách các nhân vật
-        LoadListSkis(): Danh sách các ván trượt
-        LoadHeroChoose():
+    - Class HeroConstruct.cs: Tạo thanh cuộn danh sách các nhân vật và ván trượt tuần tự để người chơi chọn. 
+        Phương thức ButtonCoinHeroClick() để mua nhân vật: 
+            Nếu nhân vật được chọn chưa unlock:
+                Nếu số tiền hiện tại > giá tiền mua nhân vật
+                    Trừ số coin hiện tại bằng giá tiền nhân vật và trả lại giá trị coin hiện tại là textCoin
+                    Text giá tiền chuyển thành SELECTED
+                    Thêm nhân vật vào danh sách nhan vật đã unlock
+                    Nhân vật sử dụng hiện tại chuyển thành nhân vật đã chọn
+                Nếu không đủ tiền 
+                    In ra thông báo lỗi không đủ tiền
+            Nếu nhân vật được chọn đã unlock:
+                Text giá tiền chuyển thành SELECTED  
+                Nhân vật sử dụng hiện tại chuyển thành nhân vật đã chọn
 
-            Trong ItemTempHero tạo Button gọi hàm ChangeImageClick.ButtonClick(string nameFunction) với nameFunction truyền vào là ButtonHeroClick( trong PageConstructHero.ButtonHeroClick(string codeHero) với codeHero truyền vào là codeObject ) 
-
-            Nếu click vào vùng ItemTempHero sẽ gọi hàm ChangeImageClick.ButtonClick(): InfoObjectSelected sẽ thay đổi thành hình ảnh Hero ứng với codeHero ở vùng ItemTempHero
-                codeHeroChoose trong PageConstructHero.cs ở MainCamera sẽ có giá trị là codeObject ứng với id của các Hero
-                Text trong InfoText sẽ thay đổi theo textNoteHero (trong PageConstructHero.cs ở MainCamera textNoteHero.text = AllLanguages.heroInfoHero[heroNow.noteHero][Modules.indexLanguage] sẽ có giá trị là heroInfoHero ứng với id của các Hero) để in ra thông tin của Hero
-    - Mua Hero:
-        + Button Buy Hero
-            ButtonBuy tạo Button gọi hàm PageConstructHero.ButtonCoinHeroClick()
-
-            Tạo Text là giá tiền của Hero
-
-            Trong MainCamera file PageConstructHero.cs truyền vào textValueHero.text là Text
-
-            Nếu Hero chưa unlock
-                Nếu đủ tiền mua thì mua hero: 
-                    Trừ số tiền hiện tại bằng textValueHero
-                    textValueHero.text = AllLanguages.heroSelected[Modules.indexLanguage] đặt textValueHero.text thành heroSelected với ngôn ngữ thiết lập
-                    Thêm Hero đã mua vào list các Hero đã unlock
-                    Click heroSelected đặt nhân vật sử dụng codeHeroUse là nhân vật đã chọn codeHeroChoose
-                Nếu không đủ tiền thì gọi hàm ShowMessageErrorHero(AllLanguages.heroNotEnough[Modules.indexLanguage]) để in ra lỗi với ngôn ngữ thiết lập 
-            Nếu Hero đã unlock: 
-                    textValueHero.text thành heroSelected  
-                    Click heroSelected đặt nhân vật đã chọn codeHeroChoose thành nhân vật sử dụng codeHeroUse 
-
-    - BuySkis:
-        + Thay đổi hình ảnh miêu tả Skis trong InfoObjectSelected: 
-            Trong ListObjectSelect tạo các ItemTempSkis gán file ChangeImageClick.cs truyền vào codeObject ứng với id của các Skis
-
-            Trong ItemTempSkis tạo Button gọi hàm ChangeImageClick.ButtonClick(string nameFunction) với nameFunction truyền vào là ButtonSkisClick( trong PageConstructHero.ButtonSkisClick(string codeSkis) với codeSkis truyền vào là codeObject ) 
-
-            Nếu click vào vùng ItemTempSkis sẽ gọi hàm ChangeImageClick.ButtonClick(): InfoObjectSelected sẽ thay đổi thành hình ảnh Skis ứng với codeSkis ở vùng ItemTempSkis
-                codeSkisChoose trong PageConstructHero.cs ở MainCamera sẽ có giá trị là codeObject ứng với id của các Skis
-                Text trong InfoText sẽ thay đổi theo textNoteSkis (trong PageConstructHero.cs ở MainCamera textNoteSkis.text = AllLanguages.heroInfoHoverboard[heroNow.noteHero][Modules.indexLanguage] sẽ có giá trị là heroInfoHoverboard ứng với id của các Hero) để in ra thông tin của Skis
-
-        + Button Buy Skis
-            ButtonBuy tạo Button gọi hàm PageConstructHero.ButtonCoinSkisClick()
-
-            Tạo Text là giá tiền của Skis
-
-            Trong MainCamera file PageConstructHero.cs truyền vào textValueSkis.text là Text
-
-            Nếu Skis chưa unlock
-                Nếu đủ tiền mua thì mua Skis: 
-                    Trừ số tiền hiện tại bằng textValueSkis
-                    textValueSkis.text = AllLanguages.heroSelected[Modules.indexLanguage] đặt textValueSkis.text thành heroSelected với ngôn ngữ thiết lập
-                    Thêm Skis đã mua vào list các Hero đã unlock
-                    Click heroSelected đặt nhân vật sử dụng codeSkisChoose là nhân vật đã chọn codeSkisUse
-                Nếu không đủ tiền thì gọi hàm ShowMessageErrorHero(AllLanguages.heroNotEnough[Modules.indexLanguage]) để in ra lỗi với ngôn ngữ thiết lập 
-            Nếu Skis đã unlock: 
-                    textValueSkis.text thành heroSelected  
-                    Click heroSelected đặt Skis đã chọn codeSkisChoose thành Skis sử dụng codeSkisUse  
+        Phương thức ButtonCoinSkisClick() để mua ván trượt: 
+            Nếu ván trượt được chọn chưa unlock:
+                Nếu số tiền hiện tại > giá tiền mua ván trượt
+                    Trừ số coin hiện tại bằng giá tiền ván trượt và trả lại giá trị coin hiện tại là textCoin
+                    Text giá tiền chuyển thành SELECTED
+                    Thêm ván trượt vào danh sách ván trượt đã unlock
+                    Ván trượt sử dụng hiện tại chuyển thành ván trượt đã chọn
+                Nếu không đủ tiền 
+                    In ra thông báo lỗi không đủ tiền
+            Nếu ván trượt được chọn đã unlock:
+                Text giá tiền chuyển thành SELECTED  
+                Ván trượt sử dụng hiện tại chuyển thành ván trượt đã chọn
+        
+            
 
 
 * Xử lý nếu va chạm items
