@@ -345,3 +345,4 @@ Nhóm 7.3 làm về game unity subway surfers
                 Nếu đang không sử dụng Jumper, Rocket, Cable
                     tốc độ nhân vật chậm lại
 
+Link tải apk Android: https://drive.google.com/file/d/16NgeESZYXEJNwu6SNPRFsivPJVCRnxvx/view?usp=sharing
