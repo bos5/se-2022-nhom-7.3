@@ -139,8 +139,9 @@ Nhóm 7.3 làm về game unity subway surfers
     
     - Nếu là giày
         + Nếu chưa sử dụng giày
-            thêm hình ảnh giày trái và phải trên Hero
+            Set Model sử dụng giày trên nhân vật
         + Sử dụng giày thành true
+        + Thêm bảng hiển thị thời gian sử dụng item
         
     - Nếu là headStart
         + Tăng headStart thêm 1
@@ -152,7 +153,7 @@ Nhóm 7.3 làm về game unity subway surfers
         
     - Nếu là nam châm
         + Nếu chưa sử dụng nam châm 
-                thêm model sử dụng nam châm trên Hero
+            thêm model sử dụng nam châm trên nhân vật
         + Sử dụng nam châm thành true 
         + SetAniAddMagnet(): Set các loại di chuyển khi ăn nam châm :
             Nếu đang chạy thường: 
@@ -167,12 +168,14 @@ Nhóm 7.3 làm về game unity subway surfers
             Nếu đang bay cable: 
                 chuyển kiểu chạy thành runCableMagnet; 
                 chuyển animation thành runCableMagnet
+        + Thêm bảng hiển thị thời gian sử dụng item
             
     - Nếu là rocket
         + Nếu chưa sử dụng rocket 
-                thêm model sử dụng rocket trên Hero
+            thêm model sử dụng rocket trên nhân vật
         + Khoảng cách với Enemy = 2 
-        + Sử dụng rocket thành true     
+        + Sử dụng rocket thành true  
+        + Thêm bảng hiển thị thời gian sử dụng item   
         + Kích hoạt hiệu ứng của item bay trên không;
         + SetAniAddRocket(): 
             Nếu đang sử dụng cable
@@ -190,7 +193,7 @@ Nhóm 7.3 làm về game unity subway surfers
 
     - Nếu là jumper
         + Khoảng cách với Enemy = 2 
-        + Sử dụng rocket thành true  
+        + Sử dụng jumper thành true  
         + Kích hoạt hiệu ứng của item bay trên không;
         + SetAniAddJumper(): 
             Remove Progress sử dụng jetpack
