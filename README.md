@@ -24,7 +24,7 @@ Nhóm 7.3 làm về game unity subway surfers
  Scene LoadData: Khi vào game sẽ hiển thị một màn hình chờ để khởi tạo tài nguyên game. Màn hình chờ được thiết kế bằng đồ hoạ 2D nằm trong canvas. Các tài nguyên, script được load trong scene ListResource, Poolterrain, Poolother.
   - Poolterrain gồm các đối tượng khung cảnh, môi trường trong game như cây cối, toà nhà, đường phố,... mà nhân vật chạy.
   - Poolother gồm các coin mà nhân vật nhặt được.
-  - ListResource gồm nhân vật, kẻ thù, audio, ....
+  - ListResource gồm 
   Các lớp trên thực chất là khởi tạo các đối tượng cần sử dụng nên rất tốn thời gian và tài nguyên. Chúng đều có Dontdestroyonload(mội phương thức của class Objects trong unity giúp các đối tượng không bị loại bỏ khi tải scene) để tiếp tục sử dụng trong scene gameplay.
   Chỉ có PoolOtther là không khởi tạo tài nguyên vì đây là lớp chỉ chứa coin và vật phẩm ăn được, sẽ được khởi tạo khi ăn trong game sau.
   image.png
@@ -34,6 +34,7 @@ Nhóm 7.3 làm về game unity subway surfers
 * Ui FormGameMenu: Menu hiện thị tất cả các feature của game. Người chơi có thể lựa chọn nhân vật, mua item trong shop, kiểm tra nhiệm vụ, chỉnh sửa một số cài đặt game,...
 image.png
 * Ui FormGamePlay: Một Ui hiển thị trong màn hình chơi game. Ui này hiển thị vật phẩm có thể dùng, số vàng kiểm được, số điểm hiện tại, phím dừng game, ...
+<<<<<<< HEAD
 image.png
 * Ui ContainAchievement: Hiển thị bảng điểm sau khi thua bao gổm điểm số chơi được, vàng kiếm được,... và một hoạt ảnh nhân vật thua game. Tuy nhiên do đã bỏ phần facebook và chplay cùng một số tính năng thưởng khác liên quan đến quảng cáo nên phần này chỉ đơn giản là xử lí điểm số và nhân vật.
 image.png
@@ -41,6 +42,8 @@ image.png
  Nếu được mở ở màn hình menu thì chuyển animation nhân vật sang idleMenu và hiển thị điểm số cao nhất của người chơi.
  Nếu ấn play thì tạo trận chơi mới.
  image.png
+=======
+>>>>>>> e2fbfea1ee0b6249db1ef536aaaea90a2c0a6539
 * Kẻ thù trong game được thiết kế trong file EnemyCOntrollers.cs.
  - Một số đặc tính của kẻ thù:
    - Không bị ảnh hưởng bởi thanh chắn như nhân vật.
@@ -56,18 +59,37 @@ image.png
 
     - Mua vật phẩm: 
         + Mua Coin:
+       ![image](https://user-images.githubusercontent.com/117577336/219059497-290d418a-aabc-460f-ab02-99186f64261c.png)
+
         + Mua Keys:
+        ![image](https://user-images.githubusercontent.com/117577336/219059581-39159a06-1210-4996-ac6c-d9d435ae7f67.png)
+
         + Mua vật phẩm sử dụng 1 lần:
+        ![image](https://user-images.githubusercontent.com/117577336/219059704-f87d0586-0782-4448-b261-85b1ff370e01.png)
+
 
             Class BuyItemController.cs: để lấy ra số lượng item đang có rồi gán số lượng ra Text Total để hiển thị cho người dùng số lượng item đang có bằng các ngôn ngữ khác nhau. Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster
-
-            Class ButtonDownItem.cs: Tạo hoạt ảnh cuộn khi kéo của ListItem 
+            ![image](https://user-images.githubusercontent.com/117577336/219060192-9a1e4531-a7f6-41c3-9602-2fd459e7ffa1.png)
+            ![image](https://user-images.githubusercontent.com/117577336/219060344-62cd37b1-44a4-4981-9800-70e50fae81d3.png)
 
             Class ButtonBuyItem.cs: Xử lý mua vật phẩm khi click mua. 
-                Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster. 
-                Biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua item, biến textNote: để trả lại số lượng vật phẩm sau khi mua, biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster.
+                ![image](https://user-images.githubusercontent.com/117577336/219060652-081a8f5c-310d-4b3d-8353-8ff6e7ebd2dc.png)
+
+                Biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua item, 
+                ![image](https://user-images.githubusercontent.com/117577336/219060901-3cf00b45-a14d-44ed-a6d9-469daebd7754.png)
+
+                biến textNote: để trả lại số lượng vật phẩm sau khi mua, 
+                ![image](https://user-images.githubusercontent.com/117577336/219060990-777d7038-6927-4369-8ad1-3e7aa962cb84.png)
+
+                biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                ![image](https://user-images.githubusercontent.com/117577336/219061112-c3d3f5c1-37f0-4dfa-b63c-8c3d8dbfdaa5.png)
+
                 Nếu Code item là: 0 coin, 1 key thì xử lý trong app purchase
+                
                 Nếu Code item là: 2 skis, 4 headStart, 5 scoreBooster: 
+                ![image](https://user-images.githubusercontent.com/117577336/219061363-a2580a11-7b14-4ebb-80dc-8897653b7650.png)
+
                     Nếu số tiền hiện tại > giá tiền vật phẩm
                         Nếu số lượng item hiện tại < số lượng item tối đa(Trong Modules.cs: maxHoverboard = 9999; maxHeadstart = 10; maxScorebooster = 7;)
                             Số lượng item hiện có + 1
@@ -78,23 +100,37 @@ image.png
                     Nếu không đủ tiền 
                         textNote in ra thông báo lỗi không đủ tiền
                 Nếu Code item là: 3 mysteryBox
+                ![image](https://user-images.githubusercontent.com/117577336/219061450-ea175dec-dda6-4ca5-9c28-5378c28d8195.png)
+
                     Nếu số tiền hiện tại > giá tiền vật phẩm
                         Trừ số coin hiện tại bằng textCost và trả lại giá trị coin hiện tại là textCoin
                         Di chuyển đến PageOpenBox hoạt ảnh mở hộp   
                     Nếu không đủ tiền 
                         textNote in ra thông báo lỗi không đủ tiền
-            
+            ![image](https://user-images.githubusercontent.com/117577336/219061352-e47c83c3-f03b-47d2-9984-e4a7c37dd991.png)
+
     - Nâng cấp item (Tăng thời gian sử dụng item): 
 
             Class UpgradesController.cs: để tính giá tiền để nâng cấp item của mỗi level rồi in ra textCost. Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis. 
+            ![image](https://user-images.githubusercontent.com/117577336/219061740-ad1f79aa-95c9-4b4a-9e3e-f061d68344fb.png)
+![image](https://user-images.githubusercontent.com/117577336/219061853-01d1eb0e-f0f6-4f77-85c3-8dd6c70dc92f.png)
+
                 Giá tiền được tính bằng: money = 250 * Mathf.Pow(2, (level item + 1))
                 Nếu giá tiền hiện tại > 256000 thì giá tiền = 256000
 
-            Class ButtonDownItem.cs: Tạo hoạt ảnh cuộn khi kéo của ListItemUpgrades
-
             Class ButtonUpgradesItem.cs: Xử lý mua vật phẩm khi click mua. 
                 Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
-                Biến progressBox: để hiển thị hình ảnh thanh level của item, biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua nâng cấp, biến textNote: in ra thông báo nếu lỗi, biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                ![image](https://user-images.githubusercontent.com/117577336/219062013-fb8b4827-7a27-4c5a-ae71-d819db14ebef.png)
+
+                Biến progressBox: để hiển thị hình ảnh thanh level của item, biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua nâng cấp,
+                ![image](https://user-images.githubusercontent.com/117577336/219062721-b64bebdc-edf8-4f91-ba20-3ea2157bc532.png)
+
+                biến textNote: in ra thông báo nếu lỗi, 
+                ![image](https://user-images.githubusercontent.com/117577336/219062872-826d152a-90d8-4e99-8369-a710b90877b9.png)
+
+                biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                ![image](https://user-images.githubusercontent.com/117577336/219062954-6e54d9a1-dcc2-4a13-80fc-3915f5ebbb32.png)
+
                     Nếu số tiền hiện tại > giá tiền nâng cấp
                         Nếu level item hiện tại < level item item tối đa(Trong Modules.cs: maxLevelItem = 10)
                             Tăng level item lên 1
@@ -104,6 +140,8 @@ image.png
                             textNote in ra thông báo lỗi shopMaxLevel 
                     Nếu không đủ tiền 
                         textNote in ra thông báo lỗi không đủ tiền
+                        ![image](https://user-images.githubusercontent.com/117577336/219063251-75832f40-e1bd-4517-9eab-cf1f66587887.png)
+
                 
 
 * Mua Hero và Skis:
@@ -288,26 +326,35 @@ image.png
 
 *  Bật/tắt nhạc nền, âm thanh; điều chỉnh độ nhạy, mức độ các hiệu ứng; thoát game:
     - Trong các lớp xử lý công việc liên quan đến âm thanh, thường có hàm PlayAudioClipFree() để xử lý dãn cách âm thanh, ko cho âm thanh chạy quá sát.
+    ![image](https://user-images.githubusercontent.com/30952488/219052724-bce1c8ed-38d5-4931-bf7f-ce013d30a3b9.png)
     - Lớp MessageSetting.cs gọi hàm StartShowMessage() để hiện ra bảng setting.
+    ![image](https://user-images.githubusercontent.com/30952488/219054450-e6ea9bad-27dd-4841-8d14-26b366744b54.png)
+    ![image](https://user-images.githubusercontent.com/30952488/219052940-a64258c3-d29f-4be9-9e03-9d2727e831d0.png)
     - Bật tắt nhạc nền: 
         + ButtonVolumeBGClick() được gọi khi ta ấn vào nút:
             Thay đổi giá trị volumeBackground từ 0 thành 1 hoặc từ 1 thành 0 tùy thuộc vào giá trị ban đầu. Song song đó là đổi chữ "On" thành "Off" hoặc "Off" thành "On"
-            Sau đó, vẫn cho chơi nhạc bằng hàm PlayAudioLoop() nhưng tùy vào vomlumeBackground mà ta sẽ nghe thấy nhạc hoặc không. Và lưu lại cài đặt bằng SaveSettingValue().
+            Sau đó, vẫn cho chơi nhạc bằng hàm PlayAudioLoop() nhưng tùy vào vomlumeBackground mà ta sẽ nghe thấy nhạc hoặc không. Và lưu lại cài đặt bằng SaveSettingValue()
+            ![image](https://user-images.githubusercontent.com/30952488/219053102-cd1b0b10-4a52-412e-acdb-397229a650c7.png)
     - Bật tắt âm thanh khi nhấn nút :
         + ButtonVolumeATClick() được gọi khi ta ấn nút: 
             Tương tự như bật tắt nhạc nền nhưng ko cho chơi nhạc bằng hàm PlayAudioLoop().
+            ![image](https://user-images.githubusercontent.com/30952488/219053229-55d6a384-9344-4435-be10-6ceaa4dc166f.png)
     - Điều chỉnh mức độ các hiệu ứng:
         + ButtonReducedEffect() được gọi khi ta ấn nút:   
             Thay đổi giá trị reducedEffect từ 2 thành 1 hoặc 1 thành 0 hoặc 0 thành 2 và đổi giá trị text tương ứng High->Medium,Medium->Low,Low->High. Lưu lại cài đặt bằng SaveSettingValue().
+            ![image](https://user-images.githubusercontent.com/30952488/219053285-c24fc108-f41d-417d-8a54-4965243a72d4.png)
     - Điều chỉnh độ nhạy:
         + SliderSensivity() được gọi khi ta di chuyển thanh:
             gọi hàm UpdateValueSensivity() trong lớp Modules để chỉnh độ nhạy. Và lưu lại cài đặt bằng hàm SaveSettingValue().
+            ![image](https://user-images.githubusercontent.com/30952488/219053348-2e152148-945f-41de-8579-40489b6da56e.png)
     - Thoát game: 
         + gọi đến hàm ButtonQuitGame() khi ta nhấn nút "Quit Game":
             thoát khỏi ứng dụng bằng lệnh Application.Quit().
+            ![image](https://user-images.githubusercontent.com/30952488/219053431-266ce639-ad53-4985-95c5-8eb566a01ff7.png)
 
 * Đổi ngôn ngữ : 
     - Khi nhấn nút thì lớp MessageListLanguage sẽ gọi hàm StartShowMessage() để hiện lên bảng thông báo các ngôn ngữ có thể đổi và cờ của các nước như là nút ấn.
+    ![image](https://user-images.githubusercontent.com/30952488/219054234-ce42beb7-9d4a-40ea-86da-91ba1b628b79.png)
     - Nếu muốn thay đổi thì chọn cờ nước tương ứng, khi đó ta sẽ gọi hàm ChangeLanguage() với tham số là số nguyên biểu diễn ngôn ngữ mà ta đã chọn :
             public void ChangeLanguage(int indexLang)
         {
