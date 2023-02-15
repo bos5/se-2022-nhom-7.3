@@ -66,7 +66,7 @@ Nhóm 7.3 làm về game unity subway surfers
         ![image](https://user-images.githubusercontent.com/117577336/219059704-f87d0586-0782-4448-b261-85b1ff370e01.png)
 
 
-    Class BuyItemController.cs: để lấy ra số lượng item đang có rồi gán số lượng ra Text Total để hiển thị cho người dùng số lượng item đang có bằng các ngôn ngữ khác nhau. Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster
+  Class BuyItemController.cs: để lấy ra số lượng item đang có rồi gán số lượng ra Text Total để hiển thị cho người dùng số lượng item đang có bằng các ngôn ngữ khác nhau. Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster
             ![image](https://user-images.githubusercontent.com/117577336/219060192-9a1e4531-a7f6-41c3-9602-2fd459e7ffa1.png)
             ![image](https://user-images.githubusercontent.com/117577336/219060344-62cd37b1-44a4-4981-9800-70e50fae81d3.png)
 
