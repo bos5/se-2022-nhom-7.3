@@ -229,23 +229,23 @@ Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
         + Sử dụng nam châm thành true 
         + SetAniAddMagnet(): Set các loại di chuyển khi ăn nam châm :
             Nếu đang chạy thường: chuyển kiểu chạy thành runMagnet; 
-            ![image](https://user-images.githubusercontent.com/117577336/219074221-d8f9e063-49ad-448f-b17f-fbe786aea112.png)
+![image](https://user-images.githubusercontent.com/117577336/219074221-d8f9e063-49ad-448f-b17f-fbe786aea112.png)
             Nếu đang trượt ván:  chuyển kiểu chạy thành runSkisMagnet; 
-            ![image](https://user-images.githubusercontent.com/117577336/219075112-7fa9654d-5d72-4cda-9f40-e0b8e1d56a0b.png)
+![image](https://user-images.githubusercontent.com/117577336/219075112-7fa9654d-5d72-4cda-9f40-e0b8e1d56a0b.png)
             Nếu đang bay tên lửa:  chuyển kiểu chạy thành runRocketMagnet; 
-            ![image](https://user-images.githubusercontent.com/117577336/219075913-c225499d-514a-4615-8eaa-f4562eaeaffa.png)
+![image](https://user-images.githubusercontent.com/117577336/219075913-c225499d-514a-4615-8eaa-f4562eaeaffa.png)
             Nếu đang bay cable: chuyển kiểu chạy thành runCableMagnet; 
-            ![image](https://user-images.githubusercontent.com/117577336/219076663-5a2f7410-1c54-43ab-a157-9e28a824ee97.png)
+![image](https://user-images.githubusercontent.com/117577336/219076663-5a2f7410-1c54-43ab-a157-9e28a824ee97.png)
 
     - Nếu là rocket
         + Nếu chưa sử dụng rocket 
-        ![image](https://user-images.githubusercontent.com/117577336/219076781-3360363a-ed86-4055-97f6-962c8190a866.png)
+![image](https://user-images.githubusercontent.com/117577336/219076781-3360363a-ed86-4055-97f6-962c8190a866.png)
 
             thêm model sử dụng rocket trên nhân vật
         + Khoảng cách với Enemy = 2 
         + Sử dụng rocket thành true  
         + Thêm bảng hiển thị thời gian sử dụng item  
-        ![image](https://user-images.githubusercontent.com/117577336/219076820-6b630f18-72d0-49ff-b786-1a1ece84d303.png)
+![image](https://user-images.githubusercontent.com/117577336/219076820-6b630f18-72d0-49ff-b786-1a1ece84d303.png)
         + Kích hoạt hiệu ứng của item bay trên không;
         + SetAniAddRocket(): 
             Nếu đang sử dụng cable
@@ -253,9 +253,9 @@ Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
             Nếu đang jumper
                 Sử dụng Jumper = false;
             Nếu đang sử dụng nam châm chuyển kiểu chạy thành runRocketMagnet;
-            ![image](https://user-images.githubusercontent.com/117577336/219075913-c225499d-514a-4615-8eaa-f4562eaeaffa.png)
+![image](https://user-images.githubusercontent.com/117577336/219075913-c225499d-514a-4615-8eaa-f4562eaeaffa.png)
             Những trường hợp còn lại chuyển kiểu chạy thành runRocket;
-             ![image](https://user-images.githubusercontent.com/117577336/219076781-3360363a-ed86-4055-97f6-962c8190a866.png)
+![image](https://user-images.githubusercontent.com/117577336/219076781-3360363a-ed86-4055-97f6-962c8190a866.png)
              
 
     - Nếu là jumper
@@ -303,9 +303,8 @@ Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
     ![image](https://user-images.githubusercontent.com/117577336/219078045-f06677a9-de2c-4f8c-b508-b46a7dc02b17.png)
 
         + Remove hiệu ứng item bay
-        + Thiết lập lại trang thái:
-                không thể di chuyển sang trái phải
-                ![image](https://user-images.githubusercontent.com/117577336/219078303-87294b82-fce0-4181-9c47-46a0e8aeb23c.png)
+        + Thiết lập lại trang thái:không thể di chuyển sang trái phải
+        ![image](https://user-images.githubusercontent.com/117577336/219078303-87294b82-fce0-4181-9c47-46a0e8aeb23c.png)
 
         + Khoảng cách với Enemy = 2 
         + SetAniAddBalloon():
@@ -319,31 +318,31 @@ Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
             Nếu đang sử dụng jumper
                 Sử dụng Jumper = false;
         + SetAniAfterFall(): sau khi tiếp đất 
-        ![image](https://user-images.githubusercontent.com/117577336/219079093-345914a5-cd71-467e-b35b-887ac067f29d.png)
+![image](https://user-images.githubusercontent.com/117577336/219079093-345914a5-cd71-467e-b35b-887ac067f29d.png)
 
             Nếu đang sử dụng skis
                 Nếu đang sử dụng nam châm
-                    chuyển kiểu chạy thành runSkisMagnet;
-                    ![image](https://user-images.githubusercontent.com/117577336/219079254-b8a7b66a-fae1-4e89-bd0e-a41ce63badb0.png)
+                chuyển kiểu chạy thành runSkisMagnet;
+![image](https://user-images.githubusercontent.com/117577336/219079254-b8a7b66a-fae1-4e89-bd0e-a41ce63badb0.png)
 
                 Nếu không sử dụng nam châm
-                    chuyển kiểu chạy thành runSkis;
-                    ![image](https://user-images.githubusercontent.com/117577336/219079631-975ab5de-145b-4f76-98a9-ada8ac616432.png)
+                chuyển kiểu chạy thành runSkis;
+![image](https://user-images.githubusercontent.com/117577336/219079631-975ab5de-145b-4f76-98a9-ada8ac616432.png)
 
             Những trường hợp còn lại: 
-                Nếu đang sử dụng nam châm
-                    chuyển kiểu chạy thành runMagnet;
-                    ![image](https://user-images.githubusercontent.com/117577336/219079815-8f96fbab-8d41-4d0e-8e88-43458c129220.png)
+            Nếu đang sử dụng nam châm
+            chuyển kiểu chạy thành runMagnet;
+![image](https://user-images.githubusercontent.com/117577336/219079815-8f96fbab-8d41-4d0e-8e88-43458c129220.png)
 
-                Nếu không sử dụng nam châm
-                    chuyển kiểu chạy thành runNormal;  
-                    ![image](https://user-images.githubusercontent.com/117577336/219079407-5062e654-fd6e-452c-9b63-9c8e0293cb1b.png)
+            Nếu không sử dụng nam châm
+              chuyển kiểu chạy thành runNormal;  
+![image](https://user-images.githubusercontent.com/117577336/219079407-5062e654-fd6e-452c-9b63-9c8e0293cb1b.png)
 
             + Hủy bỏ sử dụng Animation sử dụng balloon 
         + Reset lại toàn bộ item trên map    
     
     - Nếu là scoreBooster
-    ![image](https://user-images.githubusercontent.com/117577336/219077735-460b8e74-1c6b-4902-a7e5-1170b96cefc0.png)
+![image](https://user-images.githubusercontent.com/117577336/219077735-460b8e74-1c6b-4902-a7e5-1170b96cefc0.png)
 
         + số ScoreBooster hiện tại +1
         + Nếu số ScoreBooster hiện tại > maxScorebooster = 7
