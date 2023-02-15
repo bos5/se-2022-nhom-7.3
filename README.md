@@ -42,18 +42,37 @@ Nhóm 7.3 làm về game unity subway surfers
 
     - Mua vật phẩm: 
         + Mua Coin:
+       ![image](https://user-images.githubusercontent.com/117577336/219059497-290d418a-aabc-460f-ab02-99186f64261c.png)
+
         + Mua Keys:
+        ![image](https://user-images.githubusercontent.com/117577336/219059581-39159a06-1210-4996-ac6c-d9d435ae7f67.png)
+
         + Mua vật phẩm sử dụng 1 lần:
+        ![image](https://user-images.githubusercontent.com/117577336/219059704-f87d0586-0782-4448-b261-85b1ff370e01.png)
+
 
             Class BuyItemController.cs: để lấy ra số lượng item đang có rồi gán số lượng ra Text Total để hiển thị cho người dùng số lượng item đang có bằng các ngôn ngữ khác nhau. Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster
-
-            Class ButtonDownItem.cs: Tạo hoạt ảnh cuộn khi kéo của ListItem 
+            ![image](https://user-images.githubusercontent.com/117577336/219060192-9a1e4531-a7f6-41c3-9602-2fd459e7ffa1.png)
+            ![image](https://user-images.githubusercontent.com/117577336/219060344-62cd37b1-44a4-4981-9800-70e50fae81d3.png)
 
             Class ButtonBuyItem.cs: Xử lý mua vật phẩm khi click mua. 
-                Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster. 
-                Biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua item, biến textNote: để trả lại số lượng vật phẩm sau khi mua, biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster.
+                ![image](https://user-images.githubusercontent.com/117577336/219060652-081a8f5c-310d-4b3d-8353-8ff6e7ebd2dc.png)
+
+                Biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua item, 
+                ![image](https://user-images.githubusercontent.com/117577336/219060901-3cf00b45-a14d-44ed-a6d9-469daebd7754.png)
+
+                biến textNote: để trả lại số lượng vật phẩm sau khi mua, 
+                ![image](https://user-images.githubusercontent.com/117577336/219060990-777d7038-6927-4369-8ad1-3e7aa962cb84.png)
+
+                biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                ![image](https://user-images.githubusercontent.com/117577336/219061112-c3d3f5c1-37f0-4dfa-b63c-8c3d8dbfdaa5.png)
+
                 Nếu Code item là: 0 coin, 1 key thì xử lý trong app purchase
+                
                 Nếu Code item là: 2 skis, 4 headStart, 5 scoreBooster: 
+                ![image](https://user-images.githubusercontent.com/117577336/219061363-a2580a11-7b14-4ebb-80dc-8897653b7650.png)
+
                     Nếu số tiền hiện tại > giá tiền vật phẩm
                         Nếu số lượng item hiện tại < số lượng item tối đa(Trong Modules.cs: maxHoverboard = 9999; maxHeadstart = 10; maxScorebooster = 7;)
                             Số lượng item hiện có + 1
@@ -64,23 +83,37 @@ Nhóm 7.3 làm về game unity subway surfers
                     Nếu không đủ tiền 
                         textNote in ra thông báo lỗi không đủ tiền
                 Nếu Code item là: 3 mysteryBox
+                ![image](https://user-images.githubusercontent.com/117577336/219061450-ea175dec-dda6-4ca5-9c28-5378c28d8195.png)
+
                     Nếu số tiền hiện tại > giá tiền vật phẩm
                         Trừ số coin hiện tại bằng textCost và trả lại giá trị coin hiện tại là textCoin
                         Di chuyển đến PageOpenBox hoạt ảnh mở hộp   
                     Nếu không đủ tiền 
                         textNote in ra thông báo lỗi không đủ tiền
-            
+            ![image](https://user-images.githubusercontent.com/117577336/219061352-e47c83c3-f03b-47d2-9984-e4a7c37dd991.png)
+
     - Nâng cấp item (Tăng thời gian sử dụng item): 
 
             Class UpgradesController.cs: để tính giá tiền để nâng cấp item của mỗi level rồi in ra textCost. Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis. 
+            ![image](https://user-images.githubusercontent.com/117577336/219061740-ad1f79aa-95c9-4b4a-9e3e-f061d68344fb.png)
+![image](https://user-images.githubusercontent.com/117577336/219061853-01d1eb0e-f0f6-4f77-85c3-8dd6c70dc92f.png)
+
                 Giá tiền được tính bằng: money = 250 * Mathf.Pow(2, (level item + 1))
                 Nếu giá tiền hiện tại > 256000 thì giá tiền = 256000
 
-            Class ButtonDownItem.cs: Tạo hoạt ảnh cuộn khi kéo của ListItemUpgrades
-
             Class ButtonUpgradesItem.cs: Xử lý mua vật phẩm khi click mua. 
                 Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
-                Biến progressBox: để hiển thị hình ảnh thanh level của item, biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua nâng cấp, biến textNote: in ra thông báo nếu lỗi, biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                ![image](https://user-images.githubusercontent.com/117577336/219062013-fb8b4827-7a27-4c5a-ae71-d819db14ebef.png)
+
+                Biến progressBox: để hiển thị hình ảnh thanh level của item, biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua nâng cấp,
+                ![image](https://user-images.githubusercontent.com/117577336/219062721-b64bebdc-edf8-4f91-ba20-3ea2157bc532.png)
+
+                biến textNote: in ra thông báo nếu lỗi, 
+                ![image](https://user-images.githubusercontent.com/117577336/219062872-826d152a-90d8-4e99-8369-a710b90877b9.png)
+
+                biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+                ![image](https://user-images.githubusercontent.com/117577336/219062954-6e54d9a1-dcc2-4a13-80fc-3915f5ebbb32.png)
+
                     Nếu số tiền hiện tại > giá tiền nâng cấp
                         Nếu level item hiện tại < level item item tối đa(Trong Modules.cs: maxLevelItem = 10)
                             Tăng level item lên 1
@@ -90,6 +123,8 @@ Nhóm 7.3 làm về game unity subway surfers
                             textNote in ra thông báo lỗi shopMaxLevel 
                     Nếu không đủ tiền 
                         textNote in ra thông báo lỗi không đủ tiền
+                        ![image](https://user-images.githubusercontent.com/117577336/219063251-75832f40-e1bd-4517-9eab-cf1f66587887.png)
+
                 
 
 * Mua Hero và Skis:
