@@ -70,7 +70,7 @@ Nhóm 7.3 làm về game unity subway surfers
             ![image](https://user-images.githubusercontent.com/117577336/219060192-9a1e4531-a7f6-41c3-9602-2fd459e7ffa1.png)
             ![image](https://user-images.githubusercontent.com/117577336/219060344-62cd37b1-44a4-4981-9800-70e50fae81d3.png)
 
-            Class ButtonBuyItem.cs: Xử lý mua vật phẩm khi click mua. 
+  Class ButtonBuyItem.cs: Xử lý mua vật phẩm khi click mua. 
                 Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster.
                 ![image](https://user-images.githubusercontent.com/117577336/219060652-081a8f5c-310d-4b3d-8353-8ff6e7ebd2dc.png)
 
