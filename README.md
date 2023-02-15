@@ -140,8 +140,9 @@ Nhóm 7.3 làm về game unity subway surfers
     
     - Nếu là giày
         + Nếu chưa sử dụng giày
-            thêm hình ảnh giày trái và phải trên Hero
+            Set Model sử dụng giày trên nhân vật
         + Sử dụng giày thành true
+        + Thêm bảng hiển thị thời gian sử dụng item
         
     - Nếu là headStart
         + Tăng headStart thêm 1
@@ -153,7 +154,7 @@ Nhóm 7.3 làm về game unity subway surfers
         
     - Nếu là nam châm
         + Nếu chưa sử dụng nam châm 
-                thêm model sử dụng nam châm trên Hero
+            thêm model sử dụng nam châm trên nhân vật
         + Sử dụng nam châm thành true 
         + SetAniAddMagnet(): Set các loại di chuyển khi ăn nam châm :
             Nếu đang chạy thường: 
@@ -168,12 +169,14 @@ Nhóm 7.3 làm về game unity subway surfers
             Nếu đang bay cable: 
                 chuyển kiểu chạy thành runCableMagnet; 
                 chuyển animation thành runCableMagnet
+        + Thêm bảng hiển thị thời gian sử dụng item
             
     - Nếu là rocket
         + Nếu chưa sử dụng rocket 
-                thêm model sử dụng rocket trên Hero
+            thêm model sử dụng rocket trên nhân vật
         + Khoảng cách với Enemy = 2 
-        + Sử dụng rocket thành true     
+        + Sử dụng rocket thành true  
+        + Thêm bảng hiển thị thời gian sử dụng item   
         + Kích hoạt hiệu ứng của item bay trên không;
         + SetAniAddRocket(): 
             Nếu đang sử dụng cable
@@ -191,7 +194,7 @@ Nhóm 7.3 làm về game unity subway surfers
 
     - Nếu là jumper
         + Khoảng cách với Enemy = 2 
-        + Sử dụng rocket thành true  
+        + Sử dụng jumper thành true  
         + Kích hoạt hiệu ứng của item bay trên không;
         + SetAniAddJumper(): 
             Remove Progress sử dụng jetpack
@@ -316,11 +319,8 @@ Nhóm 7.3 làm về game unity subway surfers
         + Va chạm không bật lại 
             Nếu đang sử dụng skis: Thực hiện xóa tất cả vật cản xung quanh khu vực này này
             Nếu không sử dụng skis: Bị chết do backScene
-        + Xử lý va chạm với vật cản đẩy lại
-            Nếu đang ở bên trái
-                nếu đi sang trái
-            Nếu đang ở bên phải
-                nếu đi sang trái
+            
+        + Xử lý va chạm với vật cản đẩy lại:(Nếu đang ở bên trái rồi đi sang trái, Nếu đang ở bên phải rồi đi sang phải)
             ColliderObjectSlowSpeed():
                 Khoảng cách enemy -1
                 Nếu khoảng cách enemy = 0 -> bị tóm
@@ -328,12 +328,12 @@ Nhóm 7.3 làm về game unity subway surfers
                         Khoảng cách enemy = 2;
                         Trạng thái hero chuyển thành run;
                     Nếu không sử dụng skis
-                        Bị chết do policeCatch
+                        Bị chết do cảnh sát tóm
                 Nếu khoảng cách enemy > 0
                     Nếu đang không sử dụng Jumper, Rocket, Cable
                         tốc độ nhân vật chậm lại
 
-    - Xử lý va chạm vật cản typeCollider == TypeCollider.slower
+    - Xử lý va chạm vật cản (typeCollider == TypeCollider.slower)
         + gọi hàm ColliderObjectSlowSpeed():
             Khoảng cách enemy -1
             Nếu khoảng cách enemy = 0 -> bị tóm
@@ -341,8 +341,9 @@ Nhóm 7.3 làm về game unity subway surfers
                     Khoảng cách enemy = 2;
                     Trạng thái hero chuyển thành run;
                 Nếu không sử dụng skis
-                    Bị chết do policeCatch
+                    Bị chết do cảnh sát tóm 
             Nếu khoảng cách enemy > 0
                 Nếu đang không sử dụng Jumper, Rocket, Cable
                     tốc độ nhân vật chậm lại
 
+Link tải apk Android: https://drive.google.com/file/d/1pHjMz8gmM3LNHegzYs5j80MoUA-kFskM/view?usp=share_link
