@@ -27,23 +27,13 @@ Nhóm 7.3 làm về game unity subway surfers
   - ListResource gồm 
   Các lớp trên thực chất là khởi tạo các đối tượng cần sử dụng nên rất tốn thời gian và tài nguyên. Chúng đều có Dontdestroyonload(mội phương thức của class Objects trong unity giúp các đối tượng không bị loại bỏ khi tải scene) để tiếp tục sử dụng trong scene gameplay.
   Chỉ có PoolOtther là không khởi tạo tài nguyên vì đây là lớp chỉ chứa coin và vật phẩm ăn được, sẽ được khởi tạo khi ăn trong game sau.
-  image.png
-  image.png
-  image.png
 * Ui trong unity được thiết kế bằng canvas. Mọi unity thì đều nằm trong lớp canvas và unity hỗ trợ rất tốt Ui bằng nhiều chức năng, lựa chọn thiết kế cho người dùng. Trong game có một vài Ui quan trọng như màn hình loadgame(đã nói ở trên), màn hình menu trong scene maingame(FormGameMenu), FormGameplay, FormGameMenu, ContainAchievement, ContainShopItem, ...
 * Ui FormGameMenu: Menu hiện thị tất cả các feature của game. Người chơi có thể lựa chọn nhân vật, mua item trong shop, kiểm tra nhiệm vụ, chỉnh sửa một số cài đặt game,...
-image.png
 * Ui FormGamePlay: Một Ui hiển thị trong màn hình chơi game. Ui này hiển thị vật phẩm có thể dùng, số vàng kiểm được, số điểm hiện tại, phím dừng game, ...
-<<<<<<< HEAD
-image.png
 * Ui ContainAchievement: Hiển thị bảng điểm sau khi thua bao gổm điểm số chơi được, vàng kiếm được,... và một hoạt ảnh nhân vật thua game. Tuy nhiên do đã bỏ phần facebook và chplay cùng một số tính năng thưởng khác liên quan đến quảng cáo nên phần này chỉ đơn giản là xử lí điểm số và nhân vật.
-image.png
  Nếu nhân vật chết hay trạng thái showScorePlay thì tạo một clone nhân vật. Clone này không có rigid body với model là arrested để hiện thị trạng thái thua game.
  Nếu được mở ở màn hình menu thì chuyển animation nhân vật sang idleMenu và hiển thị điểm số cao nhất của người chơi.
  Nếu ấn play thì tạo trận chơi mới.
- image.png
-=======
->>>>>>> e2fbfea1ee0b6249db1ef536aaaea90a2c0a6539
 * Kẻ thù trong game được thiết kế trong file EnemyCOntrollers.cs.
  - Một số đặc tính của kẻ thù:
    - Không bị ảnh hưởng bởi thanh chắn như nhân vật.
