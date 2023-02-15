@@ -24,12 +24,11 @@ Nhóm 7.3 làm về game unity subway surfers
  Scene LoadData: Khi vào game sẽ hiển thị một màn hình chờ để khởi tạo tài nguyên game. Màn hình chờ được thiết kế bằng đồ hoạ 2D nằm trong canvas. Các tài nguyên, script được load trong scene ListResource, Poolterrain, Poolother.
   - Poolterrain gồm các đối tượng khung cảnh, môi trường trong game như cây cối, toà nhà, đường phố,... mà nhân vật chạy.
   - Poolother gồm các coin mà nhân vật nhặt được.
-  - ListResource gồm nhân vật, kẻ thù, audio, ....
+  - ListResource gồm 
   Các lớp trên thực chất là khởi tạo các đối tượng cần sử dụng nên rất tốn thời gian và tài nguyên. Chúng đều có Dontdestroyonload(mội phương thức của class Objects trong unity giúp các đối tượng không bị loại bỏ khi tải scene) để tiếp tục sử dụng trong scene gameplay.
 * Ui trong unity được thiết kế bằng canvas. Mọi unity thì đều nằm trong lớp canvas và unity hỗ trợ rất tốt Ui bằng nhiều chức năng, lựa chọn thiết kế cho người dùng. Trong game có một vài Ui quan trọng như màn hình loadgame(đã nói ở trên), màn hình menu trong scene maingame(FormGameMenu), FormGameplay, FormGameMenu, ContainAchievement, ContainShopItem, ...
 * Ui FormGameMenu: Menu hiện thị tất cả các feature của game. Người chơi có thể lựa chọn nhân vật, mua item trong shop, kiểm tra nhiệm vụ, chỉnh sửa một số cài đặt game,...
 * Ui FormGamePlay: Một Ui hiển thị trong màn hình chơi game. Ui này hiển thị vật phẩm có thể dùng, số vàng kiểm được, số điểm hiện tại, phím dừng game, ...
-* Ui ContainAchievement
 * Kẻ thù trong game được thiết kế trong file EnemyCOntrollers.cs.
  - Một số đặc tính của kẻ thù:
    - Không bị ảnh hưởng bởi thanh chắn như nhân vật.
@@ -275,26 +274,35 @@ Nhóm 7.3 làm về game unity subway surfers
 
 *  Bật/tắt nhạc nền, âm thanh; điều chỉnh độ nhạy, mức độ các hiệu ứng; thoát game:
     - Trong các lớp xử lý công việc liên quan đến âm thanh, thường có hàm PlayAudioClipFree() để xử lý dãn cách âm thanh, ko cho âm thanh chạy quá sát.
+    ![image](https://user-images.githubusercontent.com/30952488/219052724-bce1c8ed-38d5-4931-bf7f-ce013d30a3b9.png)
     - Lớp MessageSetting.cs gọi hàm StartShowMessage() để hiện ra bảng setting.
+    ![image](https://user-images.githubusercontent.com/30952488/219054450-e6ea9bad-27dd-4841-8d14-26b366744b54.png)
+    ![image](https://user-images.githubusercontent.com/30952488/219052940-a64258c3-d29f-4be9-9e03-9d2727e831d0.png)
     - Bật tắt nhạc nền: 
         + ButtonVolumeBGClick() được gọi khi ta ấn vào nút:
             Thay đổi giá trị volumeBackground từ 0 thành 1 hoặc từ 1 thành 0 tùy thuộc vào giá trị ban đầu. Song song đó là đổi chữ "On" thành "Off" hoặc "Off" thành "On"
-            Sau đó, vẫn cho chơi nhạc bằng hàm PlayAudioLoop() nhưng tùy vào vomlumeBackground mà ta sẽ nghe thấy nhạc hoặc không. Và lưu lại cài đặt bằng SaveSettingValue().
+            Sau đó, vẫn cho chơi nhạc bằng hàm PlayAudioLoop() nhưng tùy vào vomlumeBackground mà ta sẽ nghe thấy nhạc hoặc không. Và lưu lại cài đặt bằng SaveSettingValue()
+            ![image](https://user-images.githubusercontent.com/30952488/219053102-cd1b0b10-4a52-412e-acdb-397229a650c7.png)
     - Bật tắt âm thanh khi nhấn nút :
         + ButtonVolumeATClick() được gọi khi ta ấn nút: 
             Tương tự như bật tắt nhạc nền nhưng ko cho chơi nhạc bằng hàm PlayAudioLoop().
+            ![image](https://user-images.githubusercontent.com/30952488/219053229-55d6a384-9344-4435-be10-6ceaa4dc166f.png)
     - Điều chỉnh mức độ các hiệu ứng:
         + ButtonReducedEffect() được gọi khi ta ấn nút:   
             Thay đổi giá trị reducedEffect từ 2 thành 1 hoặc 1 thành 0 hoặc 0 thành 2 và đổi giá trị text tương ứng High->Medium,Medium->Low,Low->High. Lưu lại cài đặt bằng SaveSettingValue().
+            ![image](https://user-images.githubusercontent.com/30952488/219053285-c24fc108-f41d-417d-8a54-4965243a72d4.png)
     - Điều chỉnh độ nhạy:
         + SliderSensivity() được gọi khi ta di chuyển thanh:
             gọi hàm UpdateValueSensivity() trong lớp Modules để chỉnh độ nhạy. Và lưu lại cài đặt bằng hàm SaveSettingValue().
+            ![image](https://user-images.githubusercontent.com/30952488/219053348-2e152148-945f-41de-8579-40489b6da56e.png)
     - Thoát game: 
         + gọi đến hàm ButtonQuitGame() khi ta nhấn nút "Quit Game":
             thoát khỏi ứng dụng bằng lệnh Application.Quit().
+            ![image](https://user-images.githubusercontent.com/30952488/219053431-266ce639-ad53-4985-95c5-8eb566a01ff7.png)
 
 * Đổi ngôn ngữ : 
     - Khi nhấn nút thì lớp MessageListLanguage sẽ gọi hàm StartShowMessage() để hiện lên bảng thông báo các ngôn ngữ có thể đổi và cờ của các nước như là nút ấn.
+    ![image](https://user-images.githubusercontent.com/30952488/219054234-ce42beb7-9d4a-40ea-86da-91ba1b628b79.png)
     - Nếu muốn thay đổi thì chọn cờ nước tương ứng, khi đó ta sẽ gọi hàm ChangeLanguage() với tham số là số nguyên biểu diễn ngôn ngữ mà ta đã chọn :
             public void ChangeLanguage(int indexLang)
         {
