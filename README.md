@@ -66,7 +66,7 @@ Nhóm 7.3 làm về game unity subway surfers
         ![image](https://user-images.githubusercontent.com/117577336/219059704-f87d0586-0782-4448-b261-85b1ff370e01.png)
 
 
-            Class BuyItemController.cs: để lấy ra số lượng item đang có rồi gán số lượng ra Text Total để hiển thị cho người dùng số lượng item đang có bằng các ngôn ngữ khác nhau. Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster
+    Class BuyItemController.cs: để lấy ra số lượng item đang có rồi gán số lượng ra Text Total để hiển thị cho người dùng số lượng item đang có bằng các ngôn ngữ khác nhau. Code item là: 0 coin, 1 key, 2 skis, 3 mysteryBox, 4 headStart, 5 scoreBooster
             ![image](https://user-images.githubusercontent.com/117577336/219060192-9a1e4531-a7f6-41c3-9602-2fd459e7ffa1.png)
             ![image](https://user-images.githubusercontent.com/117577336/219060344-62cd37b1-44a4-4981-9800-70e50fae81d3.png)
 
@@ -143,10 +143,21 @@ Nhóm 7.3 làm về game unity subway surfers
                 
 
 * Mua Hero và Skis:
+![image](https://user-images.githubusercontent.com/117577336/219064482-1029ee1e-239b-46c6-9f77-02e6b02e53fa.png)
+
     - Class ListCharacterUse.cs: danh sách các nhân vật và ván trượt trước khi load game
-    - Class ChangeImageClick.cs: Hiệu ứng chiễu đền và tạo ra các clone khi click vào nhân vật trong List nhân vật 
+    ![image](https://user-images.githubusercontent.com/117577336/219064618-40febce4-5a9e-45f6-91e3-5747549f7b76.png)
+![image](https://user-images.githubusercontent.com/117577336/219064718-e6e38e17-5592-43d6-b059-ea3f61085b3e.png)
+
+    - Class ChangeImageClick.cs: Hiệu ứng chiễu đền và tạo ra các clone khi click vào nhân vật trong List nhân vật
+    ![image](https://user-images.githubusercontent.com/117577336/219065373-76880fa6-5087-4361-9b6c-8b4d43c0a925.png)
+
     - Class HeroConstruct.cs: Tạo thanh cuộn danh sách các nhân vật và ván trượt tuần tự để người chơi chọn. 
+    ![image](https://user-images.githubusercontent.com/117577336/219065497-f8fe6182-789b-477d-b779-fe2be0c9a865.png)
+
         Phương thức ButtonCoinHeroClick() để mua nhân vật: 
+        ![image](https://user-images.githubusercontent.com/117577336/219066005-8728acb5-5ba7-4db9-9f32-3f7475f4d5f8.png)
+
             Nếu nhân vật được chọn chưa unlock:
                 Nếu số tiền hiện tại > giá tiền mua nhân vật
                     Trừ số coin hiện tại bằng giá tiền nhân vật và trả lại giá trị coin hiện tại là textCoin
@@ -160,6 +171,8 @@ Nhóm 7.3 làm về game unity subway surfers
                 Nhân vật sử dụng hiện tại chuyển thành nhân vật đã chọn
 
         Phương thức ButtonCoinSkisClick() để mua ván trượt: 
+        ![image](https://user-images.githubusercontent.com/117577336/219066056-846240a5-74e6-4293-8453-2fed1fc70ce9.png)
+
             Nếu ván trượt được chọn chưa unlock:
                 Nếu số tiền hiện tại > giá tiền mua ván trượt
                     Trừ số coin hiện tại bằng giá tiền ván trượt và trả lại giá trị coin hiện tại là textCoin
@@ -172,74 +185,83 @@ Nhóm 7.3 làm về game unity subway surfers
                 Text giá tiền chuyển thành SELECTED  
                 Ván trượt sử dụng hiện tại chuyển thành ván trượt đã chọn
         
-            
-
 
 * Xử lý nếu va chạm items
     - Nếu là đồng xu
         + Tăng coin thêm 1
-        
+     ![image](https://user-images.githubusercontent.com/117577336/219072403-4c60de81-87bb-4e68-9a05-3b2bc7ffa342.png)
+
     - Nếu là key
         + Tăng key thêm 1
+        ![image](https://user-images.githubusercontent.com/117577336/219072686-9e61e2f3-6291-4dbd-8eba-fef0e4a05c2e.png)
+
         
     - Nếu là skis
+    ![image](https://user-images.githubusercontent.com/117577336/219072854-3235a21e-b329-4dba-9bdc-6e211874de41.png)
+
         + Tăng skis thêm 1
             Nếu tổng số Skis hiện tại > maxHoverboard = 10
                 số Skis hiện tại = maxHoverboard = 10;
     
     - Nếu là giày
+    - ![image](https://user-images.githubusercontent.com/117577336/219072978-b710fe4f-6094-4cd9-962e-f89a26094c16.png)
         + Nếu chưa sử dụng giày
             Set Model sử dụng giày trên nhân vật
         + Sử dụng giày thành true
         + Thêm bảng hiển thị thời gian sử dụng item
+      ![image](https://user-images.githubusercontent.com/117577336/219073325-7a121ffc-3128-4bab-adb3-1ca0f1501a69.png)
+
         
     - Nếu là headStart
+     ![image](https://user-images.githubusercontent.com/117577336/219073474-aad3b0ae-023b-4003-9810-0eab6328ead2.png)
         + Tăng headStart thêm 1
             Nếu tổng số headStart hiện tại > maxHeadstart = 10
                 số headStart hiện tại = maxHeadstart = 10;
     
     - Nếu là mysteryBox
+     ![image](https://user-images.githubusercontent.com/117577336/219073598-1dd5dd49-612e-40e0-8f3f-d00c45d9a2ad.png)
         + Tăng mysteryBox thêm 1
         
     - Nếu là nam châm
+    ![image](https://user-images.githubusercontent.com/117577336/219073914-07f1965c-9457-4693-a268-18d2f5a1eee3.png)
+
         + Nếu chưa sử dụng nam châm 
             thêm model sử dụng nam châm trên nhân vật
+            ![image](https://user-images.githubusercontent.com/117577336/219074221-d8f9e063-49ad-448f-b17f-fbe786aea112.png)
+        + Thêm bảng hiển thị thời gian sử dụng item
+![image](https://user-images.githubusercontent.com/117577336/219074333-3e06c6a4-d293-429d-bd7e-88a30aaed61e.png)
+
         + Sử dụng nam châm thành true 
         + SetAniAddMagnet(): Set các loại di chuyển khi ăn nam châm :
-            Nếu đang chạy thường: 
-                chuyển kiểu chạy thành runMagnet; 
-                chuyển animation thành runMagnet 
-            Nếu đang trượt ván: 
-                chuyển kiểu chạy thành runSkisMagnet; 
-                chuyển animation thành runSkisMagnet
-            Nếu đang bay tên lửa: 
-                chuyển kiểu chạy thành runRocketMagnet; 
-                chuyển animation thành runRocketMagnet
-            Nếu đang bay cable: 
-                chuyển kiểu chạy thành runCableMagnet; 
-                chuyển animation thành runCableMagnet
-        + Thêm bảng hiển thị thời gian sử dụng item
-            
+            Nếu đang chạy thường: chuyển kiểu chạy thành runMagnet; 
+            ![image](https://user-images.githubusercontent.com/117577336/219074221-d8f9e063-49ad-448f-b17f-fbe786aea112.png)
+            Nếu đang trượt ván:  chuyển kiểu chạy thành runSkisMagnet; 
+            ![image](https://user-images.githubusercontent.com/117577336/219075112-7fa9654d-5d72-4cda-9f40-e0b8e1d56a0b.png)
+            Nếu đang bay tên lửa:  chuyển kiểu chạy thành runRocketMagnet; 
+            ![image](https://user-images.githubusercontent.com/117577336/219075913-c225499d-514a-4615-8eaa-f4562eaeaffa.png)
+            Nếu đang bay cable: chuyển kiểu chạy thành runCableMagnet; 
+            ![image](https://user-images.githubusercontent.com/117577336/219076663-5a2f7410-1c54-43ab-a157-9e28a824ee97.png)
+
     - Nếu là rocket
         + Nếu chưa sử dụng rocket 
+        ![image](https://user-images.githubusercontent.com/117577336/219076781-3360363a-ed86-4055-97f6-962c8190a866.png)
+
             thêm model sử dụng rocket trên nhân vật
         + Khoảng cách với Enemy = 2 
         + Sử dụng rocket thành true  
-        + Thêm bảng hiển thị thời gian sử dụng item   
+        + Thêm bảng hiển thị thời gian sử dụng item  
+        ![image](https://user-images.githubusercontent.com/117577336/219076820-6b630f18-72d0-49ff-b786-1a1ece84d303.png)
         + Kích hoạt hiệu ứng của item bay trên không;
         + SetAniAddRocket(): 
             Nếu đang sử dụng cable
                 Sử dụng Cable = false;
-                Remove model sử dụng cable 
             Nếu đang jumper
                 Sử dụng Jumper = false;
-            Nếu đang sử dụng nam châm
-                chuyển kiểu chạy thành runRocketMagnet;
-                chuyển animation thành runRocketMagnet
-            Những trường hợp còn lại: 
-                chuyển kiểu chạy thành runRocket;
-                chuyển animation thành runRocket
-        + JumpHero(): bật nhảy
+            Nếu đang sử dụng nam châm chuyển kiểu chạy thành runRocketMagnet;
+            ![image](https://user-images.githubusercontent.com/117577336/219075913-c225499d-514a-4615-8eaa-f4562eaeaffa.png)
+            Những trường hợp còn lại chuyển kiểu chạy thành runRocket;
+             ![image](https://user-images.githubusercontent.com/117577336/219076781-3360363a-ed86-4055-97f6-962c8190a866.png)
+             
 
     - Nếu là jumper
         + Khoảng cách với Enemy = 2 
@@ -283,11 +305,13 @@ Nhóm 7.3 làm về game unity subway surfers
         + JumpHero(): bật nhảy
 
     - Nếu là balloon
+    ![image](https://user-images.githubusercontent.com/117577336/219078045-f06677a9-de2c-4f8c-b508-b46a7dc02b17.png)
+
         + Remove hiệu ứng item bay
         + Thiết lập lại trang thái:
-                không di chuyển sang trái phải
-                Hero thực hiện jump
-                doneBackHero = true;
+                không thể di chuyển sang trái phải
+                ![image](https://user-images.githubusercontent.com/117577336/219078303-87294b82-fce0-4181-9c47-46a0e8aeb23c.png)
+
         + Khoảng cách với Enemy = 2 
         + SetAniAddBalloon():
             Remove Progress của item jetpack
@@ -295,33 +319,40 @@ Nhóm 7.3 làm về game unity subway surfers
             Ẩn đối tượng Skis khi sử dụng item Skis
             Nếu đang sử dụng cable
                 Sử dụng Cable = false;
-                Remove Model sử dụng Cable
             Nếu đang sử dụng rocket 
                 Sử dụng Rocket = false;
-                Remove Model sử dụng Rocket
             Nếu đang sử dụng jumper
                 Sử dụng Jumper = false;
-        + Điều chỉnh camera đi theo khi bay 
         + SetAniAfterFall(): sau khi tiếp đất 
+        ![image](https://user-images.githubusercontent.com/117577336/219079093-345914a5-cd71-467e-b35b-887ac067f29d.png)
+
             Nếu đang sử dụng skis
                 Nếu đang sử dụng nam châm
                     chuyển kiểu chạy thành runSkisMagnet;
+                    ![image](https://user-images.githubusercontent.com/117577336/219079254-b8a7b66a-fae1-4e89-bd0e-a41ce63badb0.png)
+
                 Nếu không sử dụng nam châm
                     chuyển kiểu chạy thành runSkis;
+                    ![image](https://user-images.githubusercontent.com/117577336/219079631-975ab5de-145b-4f76-98a9-ada8ac616432.png)
+
             Những trường hợp còn lại: 
                 Nếu đang sử dụng nam châm
                     chuyển kiểu chạy thành runMagnet;
+                    ![image](https://user-images.githubusercontent.com/117577336/219079815-8f96fbab-8d41-4d0e-8e88-43458c129220.png)
+
                 Nếu không sử dụng nam châm
-                    chuyển kiểu chạy thành runNormal;     
-        + Hủy bỏ sử dụng Animation sử dụng balloon 
-        + Điều chỉnh camera đi theo
+                    chuyển kiểu chạy thành runNormal;  
+                    ![image](https://user-images.githubusercontent.com/117577336/219079407-5062e654-fd6e-452c-9b63-9c8e0293cb1b.png)
+
+            + Hủy bỏ sử dụng Animation sử dụng balloon 
         + Reset lại toàn bộ item trên map    
     
     - Nếu là scoreBooster
+    ![image](https://user-images.githubusercontent.com/117577336/219077735-460b8e74-1c6b-4902-a7e5-1170b96cefc0.png)
+
         + số ScoreBooster hiện tại +1
         + Nếu số ScoreBooster hiện tại > maxScorebooster = 7
             thì số ScoreBooster hiện tại  = maxScorebooster = 7
-
 *  Bật/tắt nhạc nền, âm thanh; điều chỉnh độ nhạy, mức độ các hiệu ứng; thoát game:
     - Trong các lớp xử lý công việc liên quan đến âm thanh, thường có hàm PlayAudioClipFree() để xử lý dãn cách âm thanh, ko cho âm thanh chạy quá sát.
     ![image](https://user-images.githubusercontent.com/30952488/219052724-bce1c8ed-38d5-4931-bf7f-ce013d30a3b9.png)
@@ -364,29 +395,45 @@ Nhóm 7.3 làm về game unity subway surfers
             CloseListLanguage();
         }
     - Đầu tiên, biến chứa ngôn ngữ mặc định trong Modules sẽ được thay bằng ngôn ngữ ta nhập. Sau đó, được lưu lại bằng hàm SaveSettingValue(). Và settingBox sẽ được hiện lên lại với câu lệnh settingBox.GetComponent<MessageSetting>().StartShowMessage() với ngôn ngữ mới. Tiếp đến là hộp thoại pause game khi đang chơi được cập nhật ngôn ngữ mới. Và cuối cùng là các thành phần còn lại (các cửa sổ, các màn hình khác,... ) được cập nhật ngôn ngữ mới.
-
+    
+    
 * Xử lý va chạm
     - Nếu đang sử dụng Jumper, Rocket, Cable: thì không bị va chạm
+    ![image](https://user-images.githubusercontent.com/117577336/219069376-8f0cd6a6-2202-4fa2-9d40-deef0510cf62.png)
 
     - Va chạm với vật cản đằng trước
         + Xử lý nếu có ván trượt thì không chết
             Nếu đang sử dụng skis: Thực hiện xóa tất cả vật cản xung quanh khu vực này này
+    ![image](https://user-images.githubusercontent.com/117577336/219069701-50cf07a5-b374-4211-acbf-12d736cdfb23.png)
+
         + Nếu không sử dụng skis: Bị chết do va chạm với vật cản typeFalling
-  
+  ![image](https://user-images.githubusercontent.com/117577336/219069866-acfea101-b557-4c9c-9dc5-ec1258fbbc96.png)
+
     - Va chạm trái phải
         + Va chạm không bật lại 
             Nếu đang sử dụng skis: Thực hiện xóa tất cả vật cản xung quanh khu vực này này
+    ![image](https://user-images.githubusercontent.com/117577336/219069701-50cf07a5-b374-4211-acbf-12d736cdfb23.png)
             Nếu không sử dụng skis: Bị chết do backScene
+    ![image](https://user-images.githubusercontent.com/117577336/219070071-5b30a154-0fc2-4d78-a503-e1956e3abb5d.png)
+
             
         + Xử lý va chạm với vật cản đẩy lại:(Nếu đang ở bên trái rồi đi sang trái, Nếu đang ở bên phải rồi đi sang phải)
+    ![image](https://user-images.githubusercontent.com/117577336/219070393-aa4ddcda-d369-439b-8c7c-3d230a036349.png)
+
             ColliderObjectSlowSpeed():
                 Khoảng cách enemy -1
+    ![image](https://user-images.githubusercontent.com/117577336/219070509-a8f575c0-febe-4f84-a766-99efadbe8f38.png)
+
                 Nếu khoảng cách enemy = 0 -> bị tóm
                     Nếu đang sử dụng skis
                         Khoảng cách enemy = 2;
                         Trạng thái hero chuyển thành run;
+    ![image](https://user-images.githubusercontent.com/117577336/219070808-4ee22b91-4592-47ce-be77-b800cafd97c1.png)
+
                     Nếu không sử dụng skis
                         Bị chết do cảnh sát tóm
+    ![image](https://user-images.githubusercontent.com/117577336/219071107-90569aa7-51e6-489c-8319-91e9999973bc.png)
+
                 Nếu khoảng cách enemy > 0
                     Nếu đang không sử dụng Jumper, Rocket, Cable
                         tốc độ nhân vật chậm lại
@@ -405,3 +452,5 @@ Nhóm 7.3 làm về game unity subway surfers
                     tốc độ nhân vật chậm lại
 
 Link tải apk Android: https://drive.google.com/file/d/1pHjMz8gmM3LNHegzYs5j80MoUA-kFskM/view?usp=share_link
+    
+    
