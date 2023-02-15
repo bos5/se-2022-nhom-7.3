@@ -318,11 +318,8 @@ Nhóm 7.3 làm về game unity subway surfers
         + Va chạm không bật lại 
             Nếu đang sử dụng skis: Thực hiện xóa tất cả vật cản xung quanh khu vực này này
             Nếu không sử dụng skis: Bị chết do backScene
-        + Xử lý va chạm với vật cản đẩy lại
-            Nếu đang ở bên trái
-                nếu đi sang trái
-            Nếu đang ở bên phải
-                nếu đi sang trái
+            
+        + Xử lý va chạm với vật cản đẩy lại:(Nếu đang ở bên trái rồi đi sang trái, Nếu đang ở bên phải rồi đi sang phải)
             ColliderObjectSlowSpeed():
                 Khoảng cách enemy -1
                 Nếu khoảng cách enemy = 0 -> bị tóm
@@ -330,12 +327,12 @@ Nhóm 7.3 làm về game unity subway surfers
                         Khoảng cách enemy = 2;
                         Trạng thái hero chuyển thành run;
                     Nếu không sử dụng skis
-                        Bị chết do policeCatch
+                        Bị chết do cảnh sát tóm
                 Nếu khoảng cách enemy > 0
                     Nếu đang không sử dụng Jumper, Rocket, Cable
                         tốc độ nhân vật chậm lại
 
-    - Xử lý va chạm vật cản typeCollider == TypeCollider.slower
+    - Xử lý va chạm vật cản (typeCollider == TypeCollider.slower)
         + gọi hàm ColliderObjectSlowSpeed():
             Khoảng cách enemy -1
             Nếu khoảng cách enemy = 0 -> bị tóm
@@ -343,7 +340,7 @@ Nhóm 7.3 làm về game unity subway surfers
                     Khoảng cách enemy = 2;
                     Trạng thái hero chuyển thành run;
                 Nếu không sử dụng skis
-                    Bị chết do policeCatch
+                    Bị chết do cảnh sát tóm 
             Nếu khoảng cách enemy > 0
                 Nếu đang không sử dụng Jumper, Rocket, Cable
                     tốc độ nhân vật chậm lại
