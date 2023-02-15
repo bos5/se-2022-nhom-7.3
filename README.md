@@ -112,14 +112,16 @@ Nếu Code item là: 3 mysteryBox
 
  Class ButtonUpgradesItem.cs: Xử lý mua vật phẩm khi click mua. 
 Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
- ![image](https://user-images.githubusercontent.com/117577336/219062013-fb8b4827-7a27-4c5a-ae71-d819db14ebef.png)
+    ![image](https://user-images.githubusercontent.com/117577336/219062013-fb8b4827-7a27-4c5a-ae71-d819db14ebef.png)
 
          Biến progressBox: để hiển thị hình ảnh thanh level của item, biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua nâng cấp,
-![image](https://user-images.githubusercontent.com/117577336/219062721-b64bebdc-edf8-4f91-ba20-3ea2157bc532.png)
+    ![image](https://user-images.githubusercontent.com/117577336/219062721-b64bebdc-edf8-4f91-ba20-3ea2157bc532.png)
+
         biến textNote: in ra thông báo nếu lỗi, 
- ![image](https://user-images.githubusercontent.com/117577336/219062872-826d152a-90d8-4e99-8369-a710b90877b9.png)
+     ![image](https://user-images.githubusercontent.com/117577336/219062872-826d152a-90d8-4e99-8369-a710b90877b9.png)
+ 
         biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
- ![image](https://user-images.githubusercontent.com/117577336/219062954-6e54d9a1-dcc2-4a13-80fc-3915f5ebbb32.png)
+    ![image](https://user-images.githubusercontent.com/117577336/219062954-6e54d9a1-dcc2-4a13-80fc-3915f5ebbb32.png)
 
                     Nếu số tiền hiện tại > giá tiền nâng cấp
                         Nếu level item hiện tại < level item item tối đa(Trong Modules.cs: maxLevelItem = 10)
