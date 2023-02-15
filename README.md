@@ -4,7 +4,6 @@ Nhóm 7.3 làm về game unity subway surfers
     -   Game này là phỏng theo subway surfers, đóng vai 1 nhân vật di chuyển liên tục trên đường thẳng theo 1 trong 3 đường ray và cố gắng né tránh các chướng ngại vật để đạt điểm cao, đồng thời nhặt vàng và các vật phẩm giúp ích.
     -   Bảng xếp hạng người chơi điểm cao.
     -   Cửa hàng để mua vật phẩm (key, coin, ....) và mua các nhân vật khác.
-    -   Các vật phẩm ăn được khi  đang chơi (jetpack, supersneaker, coin magnet, 2x multiplier, hoverbike, hoverboard).
     -   Chế độ nhiều người chơi (online).
     -   Kẻ thù : 1 ông cảnh sát truy đuổi.
     -   Nhiệm vụ : nhặt các item; thử thách : nhặt các chữ cái.
@@ -248,11 +247,9 @@ Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
 ![image](https://user-images.githubusercontent.com/117577336/219076820-6b630f18-72d0-49ff-b786-1a1ece84d303.png)
         + Kích hoạt hiệu ứng của item bay trên không;
         + SetAniAddRocket(): 
-            Nếu đang sử dụng cable
-                Sử dụng Cable = false;
-            Nếu đang jumper
-                Sử dụng Jumper = false;
-            Nếu đang sử dụng nam châm chuyển kiểu chạy thành runRocketMagnet;
+       Nếu đang sử dụng cable: Sử dụng Cable = false;
+       Nếu đang jumper: Sử dụng Jumper = false;
+       Nếu đang sử dụng nam châm chuyển kiểu chạy thành runRocketMagnet;
 ![image](https://user-images.githubusercontent.com/117577336/219075913-c225499d-514a-4615-8eaa-f4562eaeaffa.png)
             Những trường hợp còn lại chuyển kiểu chạy thành runRocket;
 ![image](https://user-images.githubusercontent.com/117577336/219076781-3360363a-ed86-4055-97f6-962c8190a866.png)
@@ -261,6 +258,8 @@ Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
     - Nếu là jumper
         + Khoảng cách với Enemy = 2 
         + Sử dụng jumper thành true  
+![image](https://user-images.githubusercontent.com/117577336/219084247-bde88b39-dc23-4d94-b3aa-58fb43df0c7e.png)
+
         + Kích hoạt hiệu ứng của item bay trên không;
         + SetAniAddJumper(): 
             Remove Progress sử dụng jetpack
@@ -270,34 +269,27 @@ Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
                 RemoveCableItem(false)
             Nếu đang sử dụng cable
                 RemoveJumperItem(false);
-            Những trường hợp còn lại: 
-                chuyển kiểu chạy thành runJumper;
-                chuyển animation thành runJumper
-        + JumpHero(): bật nhảy
+           
 
     - Nếu là cable
-        + Nếu chưa sử dụng cable 
-            thêm model sử dụng cable trên Hero
+        + Nếu chưa sử dụng cable: thêm model sử dụng cable trên Hero
         + Khoảng cách với Enemy = 2 
             Sử dụng Cable = true;
         + Kích hoạt hiệu ứng của item bay trên không;
+  ![image](https://user-images.githubusercontent.com/117577336/219084652-e0438746-2712-4585-a6cd-e85c7f6795b3.png)
+
         + SetAniAddCable()  
             Remove Progress của item jetpack
             Ẩn đối tượng Skis khi sử dụng item cable
             Nếu đang sử dụng rocket 
                 Sử dụng Rocket = false;
-                Remove Model sử dụng Rocket
             Nếu đang sử dụng jumper
                 Sử dụng Jumper = false;
-            Nếu đang sử dụng nam châm
-                chuyển kiểu chạy thành runCableMagnet;
-                chuyển animation thành runCableMagnet
-            Những trường hợp còn lại: 
-                chuyển kiểu chạy thành runCable;
-                chuyển animation thành runCable
-            }
-
-        + JumpHero(): bật nhảy
+            Nếu đang sử dụng nam châm: chuyển kiểu chạy thành runCableMagnet;
+![image](https://user-images.githubusercontent.com/117577336/219085065-b06c2657-31fc-4d46-a382-509d33a1f7b5.png)
+            Những trường hợp còn lại:  chuyển kiểu chạy thành runCable;
+ ![image](https://user-images.githubusercontent.com/117577336/219084652-e0438746-2712-4585-a6cd-e85c7f6795b3.png)
+         
 
     - Nếu là balloon
     ![image](https://user-images.githubusercontent.com/117577336/219078045-f06677a9-de2c-4f8c-b508-b46a7dc02b17.png)
