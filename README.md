@@ -26,14 +26,22 @@ Nhóm 7.3 làm về game unity subway surfers
   - Poolother gồm các coin mà nhân vật nhặt được.
   - ListResource gồm nhân vật, audio,kẻ thù.
   Các lớp trên thực chất là khởi tạo các đối tượng cần sử dụng nên rất tốn thời gian và tài nguyên. Chúng đều có Dontdestroyonload(mội phương thức của class Objects trong unity giúp các đối tượng không bị loại bỏ khi tải scene) để tiếp tục sử dụng trong scene gameplay.
-  Chỉ có PoolOtther là không khởi tạo tài nguyên vì đây là lớp chỉ chứa coin và vật phẩm ăn được, sẽ được khởi tạo khi ăn trong game sau.
+  ![image](https://user-images.githubusercontent.com/91232320/219077884-4ebaf451-8526-4ad0-8f8f-2fb2ba7c4dab.png)
+  ![image](https://user-images.githubusercontent.com/91232320/219078084-d31c35a5-48a7-4d9e-a9e7-68a4cee02027.png)
+  ![image](https://user-images.githubusercontent.com/91232320/219078398-64f23e67-c665-451c-913b-1945e8b8e615.png)
+
 * Ui trong unity được thiết kế bằng canvas. Mọi unity thì đều nằm trong lớp canvas và unity hỗ trợ rất tốt Ui bằng nhiều chức năng, lựa chọn thiết kế cho người dùng. Trong game có một vài Ui quan trọng như màn hình loadgame(đã nói ở trên), màn hình menu trong scene maingame(FormGameMenu), FormGameplay, FormGameMenu, ContainAchievement, ContainShopItem, ...
 * Ui FormGameMenu: Menu hiện thị tất cả các feature của game. Người chơi có thể lựa chọn nhân vật, mua item trong shop, kiểm tra nhiệm vụ, chỉnh sửa một số cài đặt game,...
+![image](https://user-images.githubusercontent.com/91232320/219078791-4c994307-4651-41d9-9ff1-993cbe5d6405.png)
 * Ui FormGamePlay: Một Ui hiển thị trong màn hình chơi game. Ui này hiển thị vật phẩm có thể dùng, số vàng kiểm được, số điểm hiện tại, phím dừng game, ...
+![image](https://user-images.githubusercontent.com/91232320/219078940-be9439a4-246d-4d1f-bd15-8f269ed17cfa.png)
 * Ui ContainAchievement: Hiển thị bảng điểm sau khi thua bao gổm điểm số chơi được, vàng kiếm được,... và một hoạt ảnh nhân vật thua game. Tuy nhiên do đã bỏ phần facebook và chplay cùng một số tính năng thưởng khác liên quan đến quảng cáo nên phần này chỉ đơn giản là xử lí điểm số và nhân vật.
+![image](https://user-images.githubusercontent.com/91232320/219079293-78a69969-39a2-4b9b-8713-0172348b7a4b.png)
  Nếu nhân vật chết hay trạng thái showScorePlay thì tạo một clone nhân vật. Clone này không có rigid body với model là arrested để hiện thị trạng thái thua game.
  Nếu được mở ở màn hình menu thì chuyển animation nhân vật sang idleMenu và hiển thị điểm số cao nhất của người chơi.
  Nếu ấn play thì tạo trận chơi mới.
+ ![image](https://user-images.githubusercontent.com/91232320/219079528-3cb11e5f-923d-4c7e-ab80-5145df866b1e.png)
+
 * Kẻ thù trong game được thiết kế trong file EnemyCOntrollers.cs.
  - Một số đặc tính của kẻ thù:
    - Không bị ảnh hưởng bởi thanh chắn như nhân vật.
@@ -42,6 +50,8 @@ Nhóm 7.3 làm về game unity subway surfers
      - Khi khởi đầu game từ màn hình menu sẽ có trạng thái nghỉ(idle) và hiện hoạt ảnh tuy nhiên camera chính không chiếu vào nên người chơi sẽ không thấy. khi ấn nút start kẻ thù sẽ mặc định tiến gần tới nhân vật(gọi hàm MoveNearFarFollow)
      - Sẽ chạy chậm hơn nhân vật một khoảng và sau khi chạy một thời gian mà người chơi không vấp phải các chướng ngại nhỏ hay bị va đập với tường khi người chơi cố tình hay vô ý lướt quá sang trái hay phải khi đừng cạnh rìa, sẽ lùi xa một khoảng(gọi đến hàm RunMoveNearFarFollow) và rơi vào trạng thái nghỉ(idle) và ẩn hoạt ảnh.
      - Khi người chơi bị vấp phải các chướng ngại nhỏ sẽ tiến gần vào nhân vật(gọi đến hàm MoveNearFarFollow) và nếu người chơi vấp tiếp vào các chướng ngại nhỏ thì người chơi sẽ thua, sẽ có thêm hoạt ảnh "attack" bắt nhân vật.
+    ![image](https://user-images.githubusercontent.com/91232320/219077465-b4835e52-f046-469b-a75d-9f3cc93d0ff0.png)
+
 
 * Mua vật phẩm và nâng cấp item trong ShopItem: class PageShopItems.cs
 
