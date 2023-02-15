@@ -114,14 +114,12 @@ Nếu Code item là: 3 mysteryBox
 Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
  ![image](https://user-images.githubusercontent.com/117577336/219062013-fb8b4827-7a27-4c5a-ae71-d819db14ebef.png)
 
-                Biến progressBox: để hiển thị hình ảnh thanh level của item, biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua nâng cấp,
-                ![image](https://user-images.githubusercontent.com/117577336/219062721-b64bebdc-edf8-4f91-ba20-3ea2157bc532.png)
-
-                biến textNote: in ra thông báo nếu lỗi, 
-                ![image](https://user-images.githubusercontent.com/117577336/219062872-826d152a-90d8-4e99-8369-a710b90877b9.png)
-
-                biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
-                ![image](https://user-images.githubusercontent.com/117577336/219062954-6e54d9a1-dcc2-4a13-80fc-3915f5ebbb32.png)
+         Biến progressBox: để hiển thị hình ảnh thanh level của item, biến textCost: lấy giá tiền của vật phẩm được tạo ở giao diện để thực hiện mua nâng cấp,
+![image](https://user-images.githubusercontent.com/117577336/219062721-b64bebdc-edf8-4f91-ba20-3ea2157bc532.png)
+        biến textNote: in ra thông báo nếu lỗi, 
+ ![image](https://user-images.githubusercontent.com/117577336/219062872-826d152a-90d8-4e99-8369-a710b90877b9.png)
+        biến textCoin: để trả lại số lượng coin còn lại sau khi mua.
+ ![image](https://user-images.githubusercontent.com/117577336/219062954-6e54d9a1-dcc2-4a13-80fc-3915f5ebbb32.png)
 
                     Nếu số tiền hiện tại > giá tiền nâng cấp
                         Nếu level item hiện tại < level item item tối đa(Trong Modules.cs: maxLevelItem = 10)
@@ -132,7 +130,7 @@ Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
                             textNote in ra thông báo lỗi shopMaxLevel 
                     Nếu không đủ tiền 
                         textNote in ra thông báo lỗi không đủ tiền
-                        ![image](https://user-images.githubusercontent.com/117577336/219063251-75832f40-e1bd-4517-9eab-cf1f66587887.png)
+![image](https://user-images.githubusercontent.com/117577336/219063251-75832f40-e1bd-4517-9eab-cf1f66587887.png)
 
                 
 
@@ -140,7 +138,7 @@ Code item là: 0 rocket, 1 power, 2 magnet, 3 2x, 4 cable, 5 skis
 ![image](https://user-images.githubusercontent.com/117577336/219064482-1029ee1e-239b-46c6-9f77-02e6b02e53fa.png)
 
     - Class ListCharacterUse.cs: danh sách các nhân vật và ván trượt trước khi load game
-    ![image](https://user-images.githubusercontent.com/117577336/219064618-40febce4-5a9e-45f6-91e3-5747549f7b76.png)
+![image](https://user-images.githubusercontent.com/117577336/219064618-40febce4-5a9e-45f6-91e3-5747549f7b76.png)
 ![image](https://user-images.githubusercontent.com/117577336/219064718-e6e38e17-5592-43d6-b059-ea3f61085b3e.png)
 
     - Class ChangeImageClick.cs: Hiệu ứng chiễu đền và tạo ra các clone khi click vào nhân vật trong List nhân vật
