@@ -1,0 +1,752 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.13f1 (9e7d58001ecf) revision 10386776'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'en' Physical Memory: 7959 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+F:\editor\2021.3.13f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+F:/SoftwareTech
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+61849
+Successfully changed project path to: F:/SoftwareTech
+F:/SoftwareTech
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 274.31 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.13f1 (9e7d58001ecf)
+[Subsystems] Discovering subsystems at path F:/editor/2021.3.13f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/SoftwareTech/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics (ID=0x8a56)
+    Vendor:   Intel
+    VRAM:     3979 MB
+    Driver:   27.20.100.9365
+Initialize mono
+Mono path[0] = 'F:/editor/2021.3.13f1/Editor/Data/Managed'
+Mono path[1] = 'F:/editor/2021.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'F:/editor/2021.3.13f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56124
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/editor/2021.3.13f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: F:/editor/2021.3.13f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: F:/editor/2021.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008655 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 162.53 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.923 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1925ms)
+		BeginReloadAssembly (196ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1433ms)
+			LoadAssemblies (194ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (334ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (148ms)
+			SetupLoadedEditorAssemblies (814ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (162ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (163ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (265ms)
+				ProcessInitializeOnLoadMethodAttributes (220ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.034064 seconds.
+Android Extension - Scanning For ADB Devices 6538 ms
+Begin MonoManager ReloadAssembly
+Unloading broken assembly Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll, this assembly can cause crashes in the runtime
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.26 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+Mono: successfully reloaded assembly
+- Completed reload, in  3.747 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3750ms)
+		BeginReloadAssembly (375ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (70ms)
+		EndReloadAssembly (3062ms)
+			LoadAssemblies (202ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (654ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (209ms)
+			SetupLoadedEditorAssemblies (1879ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (32ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (140ms)
+				ProcessInitializeOnLoadAttributes (1301ms)
+				ProcessInitializeOnLoadMethodAttributes (393ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.53 seconds
+Refreshing native plugins compatible for Editor in 5.20 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2775 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 214 unused Assets / (41.2 KB). Loaded Objects now: 3113.
+Memory consumption went from 133.9 MB to 133.9 MB.
+Total: 15.935500 ms (FindLiveObjects: 0.471700 ms CreateObjectMapping: 0.255200 ms MarkObjects: 15.092100 ms  DeleteObjects: 0.114800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1052461.137807 seconds.
+  path: Assets/FacebookSDK/SDK/Resources/FacebookSettings.asset
+  artifactKey: Guid(3852b123af1ef8d4d8b3929efbcffbbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FacebookSDK/SDK/Resources/FacebookSettings.asset using Guid(3852b123af1ef8d4d8b3929efbcffbbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59ba218d4f707a44035a8072e79f25e4') in 0.162638 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.036823 seconds.
+Begin MonoManager ReloadAssembly
+Unloading broken assembly Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll, this assembly can cause crashes in the runtime
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 4.87 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.904 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3906ms)
+		BeginReloadAssembly (383ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (91ms)
+		EndReloadAssembly (3152ms)
+			LoadAssemblies (312ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (810ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (199ms)
+			SetupLoadedEditorAssemblies (1705ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (92ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (5ms)
+				BeforeProcessingInitializeOnLoad (221ms)
+				ProcessInitializeOnLoadAttributes (1010ms)
+				ProcessInitializeOnLoadMethodAttributes (365ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 35.22 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2646 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 204 unused Assets / (40.6 KB). Loaded Objects now: 3117.
+Memory consumption went from 120.7 MB to 120.6 MB.
+Total: 20.627500 ms (FindLiveObjects: 0.576600 ms CreateObjectMapping: 0.249500 ms MarkObjects: 19.624500 ms  DeleteObjects: 0.173700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 302.306020 seconds.
+  path: Assets/ResourcesGame/Textures/Icons/IconGame.png
+  artifactKey: Guid(ebb2606348cdb854c958e1997fc2fce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Textures/Icons/IconGame.png using Guid(ebb2606348cdb854c958e1997fc2fce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80987167af9a198a56370b48bb1ea37d') in 0.584842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 148.123318 seconds.
+  path: Assets/FacebookSDK/SDK/Resources/FacebookSettings.asset
+  artifactKey: Guid(3852b123af1ef8d4d8b3929efbcffbbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FacebookSDK/SDK/Resources/FacebookSettings.asset using Guid(3852b123af1ef8d4d8b3929efbcffbbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6ea242ed745c7bd87717f8016370483') in 0.012548 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.036591 seconds.
+Begin MonoManager ReloadAssembly
+Unloading broken assembly Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll, this assembly can cause crashes in the runtime
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 5.58 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.737 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3738ms)
+		BeginReloadAssembly (338ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (18ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (105ms)
+		EndReloadAssembly (3087ms)
+			LoadAssemblies (233ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (715ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (225ms)
+			SetupLoadedEditorAssemblies (1754ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (68ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (6ms)
+				BeforeProcessingInitializeOnLoad (173ms)
+				ProcessInitializeOnLoadAttributes (987ms)
+				ProcessInitializeOnLoadMethodAttributes (510ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 44.35 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2646 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 204 unused Assets / (40.6 KB). Loaded Objects now: 3122.
+Memory consumption went from 120.7 MB to 120.7 MB.
+Total: 17.716600 ms (FindLiveObjects: 0.399300 ms CreateObjectMapping: 0.207000 ms MarkObjects: 16.989000 ms  DeleteObjects: 0.119800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.024096 seconds.
+Begin MonoManager ReloadAssembly
+Unloading broken assembly Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll, this assembly can cause crashes in the runtime
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 14.22 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.663 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3666ms)
+		BeginReloadAssembly (284ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (81ms)
+		EndReloadAssembly (3021ms)
+			LoadAssemblies (251ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (671ms)
+			ReleaseScriptCaches (7ms)
+			RebuildScriptCaches (211ms)
+			SetupLoadedEditorAssemblies (1619ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (70ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (14ms)
+				BeforeProcessingInitializeOnLoad (197ms)
+				ProcessInitializeOnLoadAttributes (955ms)
+				ProcessInitializeOnLoadMethodAttributes (371ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 62.09 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2646 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 204 unused Assets / (40.6 KB). Loaded Objects now: 3125.
+Memory consumption went from 120.7 MB to 120.7 MB.
+Total: 15.661800 ms (FindLiveObjects: 0.831500 ms CreateObjectMapping: 0.253400 ms MarkObjects: 14.433000 ms  DeleteObjects: 0.141700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.033126 seconds.
+Begin MonoManager ReloadAssembly
+Unloading broken assembly Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll, this assembly can cause crashes in the runtime
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.54 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.666 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3668ms)
+		BeginReloadAssembly (284ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (91ms)
+		EndReloadAssembly (2792ms)
+			LoadAssemblies (215ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (659ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (199ms)
+			SetupLoadedEditorAssemblies (1548ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (72ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (176ms)
+				ProcessInitializeOnLoadAttributes (951ms)
+				ProcessInitializeOnLoadMethodAttributes (334ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 74.37 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2646 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 204 unused Assets / (40.6 KB). Loaded Objects now: 3128.
+Memory consumption went from 120.7 MB to 120.7 MB.
+Total: 12.467500 ms (FindLiveObjects: 0.323800 ms CreateObjectMapping: 0.161400 ms MarkObjects: 11.883400 ms  DeleteObjects: 0.096300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3812.909874 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/AkioIdleArristed.prefab
+  artifactKey: Guid(04ff320704c92904884870a52482322d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/AkioIdleArristed.prefab using Guid(04ff320704c92904884870a52482322d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c542f7b960f7e5a89303065ac58fd0c8') in 2.130258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/TaditaIdleArristed.prefab
+  artifactKey: Guid(e5ac7a5a2de3aff488960925a0740fc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/TaditaIdleArristed.prefab using Guid(e5ac7a5a2de3aff488960925a0740fc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5da073e966315ea35bff52c90fdeacb5') in 0.547541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/RunubisIdleArristed.prefab
+  artifactKey: Guid(a1a7db5baac65844ca102fcd5a94d990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/RunubisIdleArristed.prefab using Guid(a1a7db5baac65844ca102fcd5a94d990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6771e02c9babfd587c47cbdc981f6cb7') in 0.515835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/KiKiIdleArristed.prefab
+  artifactKey: Guid(ec9dbdc4c2fe24b4e809bee590876a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/KiKiIdleArristed.prefab using Guid(ec9dbdc4c2fe24b4e809bee590876a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d6b32cc20e58bc1d3ec4929076f221f') in 0.180267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/HeroStela.prefab
+  artifactKey: Guid(890c17118420e404e9754222776478c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/HeroStela.prefab using Guid(890c17118420e404e9754222776478c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f4fb86f75b101159b04995a5eb8ee6') in 2.185840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/EnemyCar.prefab
+  artifactKey: Guid(ce45f2c1eb1391b4d9174b437f75a046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/EnemyCar.prefab using Guid(ce45f2c1eb1391b4d9174b437f75a046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1c772fff89e18487efa43eefd60cdf4') in 0.120858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/StelaIdleArristed.prefab
+  artifactKey: Guid(0dc62f860b7e91c4882316f1fcf8afce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/StelaIdleArristed.prefab using Guid(0dc62f860b7e91c4882316f1fcf8afce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '516cc8979dc21e377235314fa8e98a62') in 0.067765 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/Sporty Granny.prefab
+  artifactKey: Guid(3017b2055d4d77945a742805d3a91c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/Sporty Granny.prefab using Guid(3017b2055d4d77945a742805d3a91c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26872fc2481cfd80f5389ee2a60c8f62') in 1.802871 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/HeroRockStar.prefab
+  artifactKey: Guid(7dd36cf59b171cb4699743f3ccdfc5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/HeroRockStar.prefab using Guid(7dd36cf59b171cb4699743f3ccdfc5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '171048dfaa968549d0a4b984452ab304') in 0.847925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/HeroTadita.prefab
+  artifactKey: Guid(c69049f749832ee4c9376cdcf20908f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/HeroTadita.prefab using Guid(c69049f749832ee4c9376cdcf20908f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1401ca6b8589d274db2d9766ebf0cdc3') in 0.359165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/HeroAkio.prefab
+  artifactKey: Guid(a890afdf7ec2737428db6fc550276553) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/HeroAkio.prefab using Guid(a890afdf7ec2737428db6fc550276553) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '682a63785f57546f149f959dbd3d5a32') in 0.419038 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/HeroRunubos.prefab
+  artifactKey: Guid(a853335cd6f702648be3d3c254d95a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/HeroRunubos.prefab using Guid(a853335cd6f702648be3d3c254d95a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef83ab24ed17ad5d74402f8101bb6544') in 0.536212 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/HeroKiki.prefab
+  artifactKey: Guid(b637387c492406f4b9849f2c7764587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/HeroKiki.prefab using Guid(b637387c492406f4b9849f2c7764587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85df94254c84b9fe56d6abf7b6cbd120') in 0.172488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/HeroMax.prefab
+  artifactKey: Guid(3930fddb0aed11e4f9099d4db492dd34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/HeroMax.prefab using Guid(3930fddb0aed11e4f9099d4db492dd34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '509350a91deba91fab49a4e7039103cb') in 0.739982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/EnemyPolice.prefab
+  artifactKey: Guid(3816f447a339cb542ba40e0cbd8ce6b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/EnemyPolice.prefab using Guid(3816f447a339cb542ba40e0cbd8ce6b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b9d2fa0a95a0e63028833dc3f737a1b') in 0.377190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/RockStarIdleArristed.prefab
+  artifactKey: Guid(62dd8711fa3b0b14db6357fe9e83f31f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/RockStarIdleArristed.prefab using Guid(62dd8711fa3b0b14db6357fe9e83f31f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3eb83d319d6b8d25e61ac652578330e') in 0.080988 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/MaxIdleArristed.prefab
+  artifactKey: Guid(b8785546e44218c4aad5a52c4dad760d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/MaxIdleArristed.prefab using Guid(b8785546e44218c4aad5a52c4dad760d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1fbedbdcdf688068e3b4ab9626f8342') in 0.079407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 540.668364 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/AkioLoser.prefab
+  artifactKey: Guid(9e5f15ab7b2d4184984c4ffbc9052da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/AkioLoser.prefab using Guid(9e5f15ab7b2d4184984c4ffbc9052da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61924b8b25c28ae832330e48b7bf7c7f') in 0.144898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/MaxWinner.prefab
+  artifactKey: Guid(aeeec125f73bcdf47a3e956ebc70f680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/MaxWinner.prefab using Guid(aeeec125f73bcdf47a3e956ebc70f680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '782ae79c7c6541ad87c3adff93ac909d') in 0.067696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/AkioWinner.prefab
+  artifactKey: Guid(3cb915251720b6044bc1e93969bd9d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/AkioWinner.prefab using Guid(3cb915251720b6044bc1e93969bd9d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c2352e9cd1f6f405d37c8ba81ad0661') in 0.059324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/RockStarLoser.prefab
+  artifactKey: Guid(74e8085916bc4b342aea12d2d6033861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/RockStarLoser.prefab using Guid(74e8085916bc4b342aea12d2d6033861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0c1a5cdcf33118e26e139dee0895da7') in 0.086023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/TaditaLoser.prefab
+  artifactKey: Guid(5651ea183dc06ae4694c6205e6b800cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/TaditaLoser.prefab using Guid(5651ea183dc06ae4694c6205e6b800cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ea651f63d93b6cff545f2218dbc3cb6') in 0.074499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/StelaLoser.prefab
+  artifactKey: Guid(a8b2d69873565894db6ed0af9bc90f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/StelaLoser.prefab using Guid(a8b2d69873565894db6ed0af9bc90f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45eff2631f3199fb7174e86ed60d5a06') in 0.062343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/KiKiWinner.prefab
+  artifactKey: Guid(6422731593c23b94a8753202bc5551c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/KiKiWinner.prefab using Guid(6422731593c23b94a8753202bc5551c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9790cc32df1472f1aea7bf338d87bbf') in 0.034730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/MaxLoser.prefab
+  artifactKey: Guid(12961c2d4b0fd9441b456ab1a3ee582c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/MaxLoser.prefab using Guid(12961c2d4b0fd9441b456ab1a3ee582c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7ce90fdff0204a999e494673ef3d3f') in 0.058500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/StelaWinner.prefab
+  artifactKey: Guid(83ca061a7ea9e3847b4b14ce3d3f9329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/StelaWinner.prefab using Guid(83ca061a7ea9e3847b4b14ce3d3f9329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e0dfd8edcc9efd295b18f0dea92649d') in 0.071753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/RunubisLoser.prefab
+  artifactKey: Guid(648153d3efc933b41adc937225d3c476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/RunubisLoser.prefab using Guid(648153d3efc933b41adc937225d3c476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee2af375a7c1d3880e2d6af71969ab7c') in 0.087931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/RunubisWinner.prefab
+  artifactKey: Guid(025099bdea956a345b8f6ed98e526afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/RunubisWinner.prefab using Guid(025099bdea956a345b8f6ed98e526afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7578ecf164675ce49fde50c83febec0b') in 0.057251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/TaditaWinner.prefab
+  artifactKey: Guid(2d81c8b4791790a4e8662786c6b3b4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/TaditaWinner.prefab using Guid(2d81c8b4791790a4e8662786c6b3b4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af3ad352223fe6c8fb727195fee404c') in 0.092359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/KiKiLoser.prefab
+  artifactKey: Guid(6cf77b5450061e84b854d44731109274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/KiKiLoser.prefab using Guid(6cf77b5450061e84b854d44731109274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fd42145ed1b44034252b928afcde582') in 0.055078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/ResourcesGame/Prefabs/Characters/WinLose/RockStarWinner.prefab
+  artifactKey: Guid(29a8d6e1648c5794a8370ff2186fa04c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Prefabs/Characters/WinLose/RockStarWinner.prefab using Guid(29a8d6e1648c5794a8370ff2186fa04c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e8c9c09825f4d5b8dff781d79b618f') in 0.080671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 789.711028 seconds.
+  path: Assets/ResourcesGame/Audios/ButtonClick.wav
+  artifactKey: Guid(5f091f4caf24e38459cdd7294387bbfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/ButtonClick.wav using Guid(5f091f4caf24e38459cdd7294387bbfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8523348204458afd86d8750a1f8697d6') in 0.471249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ResourcesGame/Audios/EatItem01.wav
+  artifactKey: Guid(52524ab50bdfefa44b3e0cff9d0e247f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/EatItem01.wav using Guid(52524ab50bdfefa44b3e0cff9d0e247f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd6c5d6f750bf9deb08c5b40409f806c') in 0.070157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/ResourcesGame/Audios/ButtonTap.wav
+  artifactKey: Guid(7263c582da894e84bbbfccde8ca50751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/ButtonTap.wav using Guid(7263c582da894e84bbbfccde8ca50751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83a316412b6b932109fe07688f301c93') in 0.044992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/ResourcesGame/Audios/EatCoin.mp3
+  artifactKey: Guid(51b833f39b952ee4bb8c05c9a5dee579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/EatCoin.mp3 using Guid(51b833f39b952ee4bb8c05c9a5dee579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1df3ebe6de60bf335f16feeaba05ea9e') in 0.076525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/ResourcesGame/Audios/HornTrain.wav
+  artifactKey: Guid(3f25b3452597fd14c9136bc4e3a3c400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/HornTrain.wav using Guid(3f25b3452597fd14c9136bc4e3a3c400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbc9f694489fb086f0ac432a2e822f1') in 0.039965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/ResourcesGame/Audios/SwipeDown.wav
+  artifactKey: Guid(250f51ceb7f6b594da08f94c5a2e3091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/SwipeDown.wav using Guid(250f51ceb7f6b594da08f94c5a2e3091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc0d7654c504c20ec1bda45f7b576031') in 0.039752 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/ResourcesGame/Audios/SwipeMove.wav
+  artifactKey: Guid(f23ec8a271426a146a18fc59c8a398e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/SwipeMove.wav using Guid(f23ec8a271426a146a18fc59c8a398e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '303ea0276636eabcea86d03c35e355e9') in 0.064210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ResourcesGame/Audios/ButtonOpen.wav
+  artifactKey: Guid(797859698a4c51f42882200693c8bdc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/ButtonOpen.wav using Guid(797859698a4c51f42882200693c8bdc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac30eefd88c8394145e80050b973cd79') in 0.049790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/ResourcesGame/Audios/EatItem02.wav
+  artifactKey: Guid(16fc9e11bfe756342a5c258bfa55901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/EatItem02.wav using Guid(16fc9e11bfe756342a5c258bfa55901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4952526e3e8637754bad14045be9ce1') in 0.050859 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/ResourcesGame/Audios/EatCoin01.wav
+  artifactKey: Guid(4c1c2d74cd9af4148aeaa9b064f34ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/EatCoin01.wav using Guid(4c1c2d74cd9af4148aeaa9b064f34ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8de265e48e64d76828677b4b74ae410') in 0.049851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/ResourcesGame/Audios/EatCoin03.wav
+  artifactKey: Guid(4a6066ce35d832f408ce2531a2f84c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/EatCoin03.wav using Guid(4a6066ce35d832f408ce2531a2f84c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0ad3b9780be612ade2cd1b730c9fe6a') in 0.054578 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/ResourcesGame/Audios/WavesoundDisco.wav
+  artifactKey: Guid(65e04925b4367964f8c3faec9e249547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/WavesoundDisco.wav using Guid(65e04925b4367964f8c3faec9e249547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8780cb674ce371867c4580bae14126d3') in 0.051840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/ResourcesGame/Audios/SwipeUp.wav
+  artifactKey: Guid(e704be943aab14c46b176eab30a6d94f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/SwipeUp.wav using Guid(e704be943aab14c46b176eab30a6d94f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f919a31d30b9e303744ce3743cf3e79') in 0.032639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/ResourcesGame/Audios/EatItem03.wav
+  artifactKey: Guid(79a22568a1838784dbd12728d46b4a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/EatItem03.wav using Guid(79a22568a1838784dbd12728d46b4a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d4bee127877a845a63ff258a33cf05') in 0.045703 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/ResourcesGame/Audios/EatCoin02.wav
+  artifactKey: Guid(b75239d9b0194164e9f50c2184e07226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/EatCoin02.wav using Guid(b75239d9b0194164e9f50c2184e07226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14730db2499267c28bb59563c68048a7') in 0.035089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/ResourcesGame/Audios/HornBus.wav
+  artifactKey: Guid(da23c4a8e04c86d46856e77a11dafbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResourcesGame/Audios/HornBus.wav using Guid(da23c4a8e04c86d46856e77a11dafbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb8be7a0e07f6f97ac6fa14d9eabd83f') in 0.035430 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.019914 seconds.
+Begin MonoManager ReloadAssembly
+Unloading broken assembly Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll, this assembly can cause crashes in the runtime
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.00 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Curl error 60: Cert verify failed: UNITYTLS_X509VERIFY_FLAG_USER_ERROR1
+Mono: successfully reloaded assembly
+- Completed reload, in  2.543 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2545ms)
+		BeginReloadAssembly (402ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (35ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (200ms)
+		EndReloadAssembly (1919ms)
+			LoadAssemblies (123ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (433ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (123ms)
+			SetupLoadedEditorAssemblies (1093ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (662ms)
+				ProcessInitializeOnLoadMethodAttributes (257ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 31.54 ms, found 12 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2646 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 204 unused Assets / (40.6 KB). Loaded Objects now: 3141.
+Memory consumption went from 125.8 MB to 125.8 MB.
+Total: 11.332500 ms (FindLiveObjects: 0.464000 ms CreateObjectMapping: 0.336800 ms MarkObjects: 10.459100 ms  DeleteObjects: 0.071600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
