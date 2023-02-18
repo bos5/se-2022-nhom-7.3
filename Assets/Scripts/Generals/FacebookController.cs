@@ -120,6 +120,22 @@ public class FacebookController : MonoBehaviour {
     void LoginPublishCallback(ILoginResult result)
     {
         //You also granted the asked publish_actions permission.
+        if (result.Error != null)
+        {
+            Debug.Log(result.Error);
+        }
+        else
+        {
+            if (FB.IsLoggedIn)
+            {
+                Debug.Log("FB is logged in");
+            }
+            else
+            {
+                Debug.Log("FB is not logged in");
+            }
+            DealWithFBMenus(FB.IsLoggedIn);
+        }
     }
 
     void DealWithFBMenus(bool isLoggedIn)
